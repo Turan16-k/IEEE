@@ -8,5 +8,5 @@ typechain-types/
 coverage/
 .env
 deployments/hardhat.json
-research_notes/
-reports/
+/research_notes/
+/reports/
