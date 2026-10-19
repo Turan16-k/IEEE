@@ -1,0 +1,309 @@
+{
+ "network": "localhost",
+ "chainId": 31337,
+ "contract": "0x922D6956C99E12DFeB3224DEA977D0939758A1Fe",
+ "passports": [
+  {
+   "tag": "01-202607-F1-original",
+   "passportId": 1,
+   "facilityId": 1,
+   "period": 202607,
+   "kind": "original",
+   "status": "Approved",
+   "riskScore": 0,
+   "txHash": "0xf2aa36f95a3f6f5b251ab08b3f52f8d952bd265d33aef5b724209289018b84be",
+   "gasUsed": "383079",
+   "reportUri": "out/reports/01-202607-F1-original.json",
+   "evidenceUri": "out/evidence/01-202607-F1-original.json"
+  },
+  {
+   "tag": "02-202607-F2-original",
+   "passportId": 2,
+   "facilityId": 2,
+   "period": 202607,
+   "kind": "original",
+   "status": "Approved",
+   "riskScore": 0,
+   "txHash": "0x48e68c572990dcc2e06829fc482d996988c095ff201ecb2ad0652a7878bd6f0c",
+   "gasUsed": "366003",
+   "reportUri": "out/reports/02-202607-F2-original.json",
+   "evidenceUri": "out/evidence/02-202607-F2-original.json"
+  },
+  {
+   "tag": "03-202607-F3-original",
+   "passportId": 3,
+   "facilityId": 3,
+   "period": 202607,
+   "kind": "original",
+   "status": "Approved",
+   "riskScore": 0,
+   "txHash": "0x43e6b5feb793dc802a36a5b994b72f108b27a2d76b9d5d9657841e86bd8988f6",
+   "gasUsed": "366015",
+   "reportUri": "out/reports/03-202607-F3-original.json",
+   "evidenceUri": "out/evidence/03-202607-F3-original.json"
+  },
+  {
+   "tag": "04-202608-F1-original",
+   "passportId": 4,
+   "facilityId": 1,
+   "period": 202608,
+   "kind": "original",
+   "status": "Approved",
+   "riskScore": 0,
+   "txHash": "0x196dfcc4845c688ad0986e54dc9888a178d130f49b64e0cd482073f08e2199c8",
+   "gasUsed": "348915",
+   "reportUri": "out/reports/04-202608-F1-original.json",
+   "evidenceUri": "out/evidence/04-202608-F1-original.json"
+  },
+  {
+   "tag": "05-202608-F2-original",
+   "passportId": 5,
+   "facilityId": 2,
+   "period": 202608,
+   "kind": "original",
+   "status": "Approved",
+   "riskScore": 0,
+   "txHash": "0x1e8c4ddbd7aa4c65bfa0e73ee7b9c83f76e2664ea350817bd62976439f833319",
+   "gasUsed": "348927",
+   "reportUri": "out/reports/05-202608-F2-original.json",
+   "evidenceUri": "out/evidence/05-202608-F2-original.json"
+  },
+  {
+   "tag": "06-202608-F3-original",
+   "passportId": 6,
+   "facilityId": 3,
+   "period": 202608,
+   "kind": "original",
+   "status": "Approved",
+   "riskScore": 0,
+   "txHash": "0x6fa2de768fc65130ffe62ff4f851cbaf78184bc2fb3a9e081cd50e31cf5b66f4",
+   "gasUsed": "348939",
+   "reportUri": "out/reports/06-202608-F3-original.json",
+   "evidenceUri": "out/evidence/06-202608-F3-original.json"
+  },
+  {
+   "tag": "07-202609-F1-original",
+   "passportId": 7,
+   "facilityId": 1,
+   "period": 202609,
+   "kind": "original",
+   "status": "Approved",
+   "riskScore": 0,
+   "txHash": "0x1fbde2367ba54f220b8d317ba3d74f822b91e60c266c4a0d5e337d5426a3f1ce",
+   "gasUsed": "348927",
+   "reportUri": "out/reports/07-202609-F1-original.json",
+   "evidenceUri": "out/evidence/07-202609-F1-original.json"
+  },
+  {
+   "tag": "08-202609-F2-original",
+   "passportId": 8,
+   "facilityId": 2,
+   "period": 202609,
+   "kind": "original",
+   "status": "Approved",
+   "riskScore": 0,
+   "txHash": "0x758393072af433abfbf01c3e61fedb706d8644305c3512f2991b71b7cc19bf14",
+   "gasUsed": "348927",
+   "reportUri": "out/reports/08-202609-F2-original.json",
+   "evidenceUri": "out/evidence/08-202609-F2-original.json"
+  },
+  {
+   "tag": "09-202609-F3-original",
+   "passportId": 9,
+   "facilityId": 3,
+   "period": 202609,
+   "kind": "original",
+   "status": "Flagged",
+   "riskScore": 1000,
+   "txHash": "0x655bf694aa3f2b211ab0a2506e4a0a039923208a8d8bd88d53f16df190b5e14a",
+   "gasUsed": "368887",
+   "reportUri": "out/reports/09-202609-F3-original.json",
+   "evidenceUri": "out/evidence/09-202609-F3-original.json"
+  },
+  {
+   "tag": "10-202609-F3-correction",
+   "passportId": 10,
+   "facilityId": 3,
+   "period": 202609,
+   "kind": "correction",
+   "status": "Approved",
+   "riskScore": 0,
+   "txHash": "0xd55aa3da64b113ba5450160c746a293f3858146245e526d1f295131a10e85f92",
+   "gasUsed": "334102",
+   "reportUri": "out/reports/10-202609-F3-correction.json",
+   "evidenceUri": "out/evidence/10-202609-F3-correction.json"
+  }
+ ],
+ "attacks": [
+  {
+   "label": "compromised verifier + outsider approve an under-declared claim",
+   "expected": "InsufficientVerifierSignatures",
+   "result": "InsufficientVerifierSignatures",
+   "blocked": true
+  },
+  {
+   "label": "replay of an anchored claim",
+   "expected": "BadNonce",
+   "result": "BadNonce",
+   "blocked": true
+  },
+  {
+   "label": "tampered emission figures",
+   "expected": "BadOperatorSignature",
+   "result": "BadOperatorSignature",
+   "blocked": true
+  },
+  {
+   "label": "same importer declares the same shipment twice",
+   "expected": "ShipmentAlreadyDeclared",
+   "result": "ShipmentAlreadyDeclared",
+   "blocked": true
+  },
+  {
+   "label": "another importer claims someone else's shipment",
+   "expected": "InvalidShipmentProof",
+   "result": "InvalidShipmentProof",
+   "blocked": true
+  },
+  {
+   "label": "declare a shipment from a FLAGGED passport",
+   "expected": "InvalidShipmentProof",
+   "result": "InvalidShipmentProof",
+   "blocked": true
+  }
+ ],
+ "declarations": [
+  {
+   "shipmentId": "TR-ETS-DEMO-0001-202607-O01",
+   "passportId": 1,
+   "importer": "0x14dC79964da2C08b23698B3D3cc7Ca32193d9955",
+   "txHash": "0xaf31b413585787022a7be5cddbb9692e1e1d65b7f24639e3f7e76dd1a788b709"
+  },
+  {
+   "shipmentId": "TR-ETS-DEMO-0001-202607-O03",
+   "passportId": 1,
+   "importer": "0x14dC79964da2C08b23698B3D3cc7Ca32193d9955",
+   "txHash": "0xe61ef007610e99c3e048f14d64440a7210eb3db6631674343801c0817e67ff1b"
+  },
+  {
+   "shipmentId": "TR-ETS-DEMO-0002-202607-O01",
+   "passportId": 2,
+   "importer": "0x14dC79964da2C08b23698B3D3cc7Ca32193d9955",
+   "txHash": "0x7f331c70b0f2b01998296018b1734d8897a5dadac33e0a7220733b4c4029aff7"
+  },
+  {
+   "shipmentId": "TR-ETS-DEMO-0002-202607-O03",
+   "passportId": 2,
+   "importer": "0x14dC79964da2C08b23698B3D3cc7Ca32193d9955",
+   "txHash": "0xf38c2d1e274d0ed8de0f72e03979437d237d67141daf5eb67282d09862665aac"
+  },
+  {
+   "shipmentId": "TR-ETS-DEMO-0003-202607-O01",
+   "passportId": 3,
+   "importer": "0x14dC79964da2C08b23698B3D3cc7Ca32193d9955",
+   "txHash": "0x5a91283b679a887178fd10ac63d5fe39d7f470428107185d016b27ffc037ca51"
+  },
+  {
+   "shipmentId": "TR-ETS-DEMO-0003-202607-O03",
+   "passportId": 3,
+   "importer": "0x14dC79964da2C08b23698B3D3cc7Ca32193d9955",
+   "txHash": "0xfa70da5a659dca4df7122c2a33e95fc9057fc929458d3eed749d377c9c1bed20"
+  },
+  {
+   "shipmentId": "TR-ETS-DEMO-0003-202607-O04",
+   "passportId": 3,
+   "importer": "0x23618e81E3f5cdF7f54C3d65f7FBc0aBf5B21E8f",
+   "txHash": "0xf99334616ad79642a2794a98a9db67b43a0376da9f6c023efbd6cf081201e992"
+  },
+  {
+   "shipmentId": "TR-ETS-DEMO-0001-202608-O01",
+   "passportId": 4,
+   "importer": "0x14dC79964da2C08b23698B3D3cc7Ca32193d9955",
+   "txHash": "0x0ff07287f00a2df914b27f3fd410b388bee42531ebedebaaf5d62f72639e302e"
+  },
+  {
+   "shipmentId": "TR-ETS-DEMO-0001-202608-O03",
+   "passportId": 4,
+   "importer": "0x14dC79964da2C08b23698B3D3cc7Ca32193d9955",
+   "txHash": "0x1ddd625478197a18e75e20bb4bf1cb2053ea1724b41a2b651a79c1d9952305ce"
+  },
+  {
+   "shipmentId": "TR-ETS-DEMO-0002-202608-O01",
+   "passportId": 5,
+   "importer": "0x14dC79964da2C08b23698B3D3cc7Ca32193d9955",
+   "txHash": "0x97d5febcb1671031af35f15c03abc664d44bc3b7915600bff510ddede7f05933"
+  },
+  {
+   "shipmentId": "TR-ETS-DEMO-0002-202608-O03",
+   "passportId": 5,
+   "importer": "0x14dC79964da2C08b23698B3D3cc7Ca32193d9955",
+   "txHash": "0xf45bfcfa249e60cb5b2a50d5c109fc44f1c8ab329465c4d43270d928ab27bb01"
+  },
+  {
+   "shipmentId": "TR-ETS-DEMO-0003-202608-O01",
+   "passportId": 6,
+   "importer": "0x14dC79964da2C08b23698B3D3cc7Ca32193d9955",
+   "txHash": "0x70eaccc125249289efadbfa35c87d5a2e4d15520bd0e6bab8114a571b24e956e"
+  },
+  {
+   "shipmentId": "TR-ETS-DEMO-0003-202608-O03",
+   "passportId": 6,
+   "importer": "0x14dC79964da2C08b23698B3D3cc7Ca32193d9955",
+   "txHash": "0xa9e350617ad2f37418bb4d74a75f39e4d337936d759b1c40ab3e71a4651fabd5"
+  },
+  {
+   "shipmentId": "TR-ETS-DEMO-0001-202609-O01",
+   "passportId": 7,
+   "importer": "0x14dC79964da2C08b23698B3D3cc7Ca32193d9955",
+   "txHash": "0xa2c84375a033dfaed095b7375d3c8952dd2154f9155c6fa06710ecd5ba9335e4"
+  },
+  {
+   "shipmentId": "TR-ETS-DEMO-0001-202609-O02",
+   "passportId": 7,
+   "importer": "0x23618e81E3f5cdF7f54C3d65f7FBc0aBf5B21E8f",
+   "txHash": "0x2a3629668876dd00aa977244afc66e2a021f2b155ffd3cd7f1066bf2a498682e"
+  },
+  {
+   "shipmentId": "TR-ETS-DEMO-0001-202609-O03",
+   "passportId": 7,
+   "importer": "0x14dC79964da2C08b23698B3D3cc7Ca32193d9955",
+   "txHash": "0x2ab867cba7928ed231bb2ec0dfbbb96e4ef0b6dd00a6faea643d6c773b88b583"
+  },
+  {
+   "shipmentId": "TR-ETS-DEMO-0002-202609-O01",
+   "passportId": 8,
+   "importer": "0x14dC79964da2C08b23698B3D3cc7Ca32193d9955",
+   "txHash": "0x8408856dc65cb4ccdf487ece0474798a6d1c1ad4b950e4733230f3f0d584490d"
+  },
+  {
+   "shipmentId": "TR-ETS-DEMO-0002-202609-O02",
+   "passportId": 8,
+   "importer": "0x23618e81E3f5cdF7f54C3d65f7FBc0aBf5B21E8f",
+   "txHash": "0xd4f90ac56d6e0826a348a1f298a2fd187c1d960944fdfe689d6bd1c0571f6c00"
+  },
+  {
+   "shipmentId": "TR-ETS-DEMO-0002-202609-O03",
+   "passportId": 8,
+   "importer": "0x14dC79964da2C08b23698B3D3cc7Ca32193d9955",
+   "txHash": "0x135a34170d2593e941bb28b9c1f5577fa456096acebb17c331ddac531043dd0d"
+  },
+  {
+   "shipmentId": "TR-ETS-DEMO-0003-202609-C01",
+   "passportId": 10,
+   "importer": "0x14dC79964da2C08b23698B3D3cc7Ca32193d9955",
+   "txHash": "0x07521b5bde6c1641f9fb48ea52a2f02efc6f432acd45bbb661dd1987c2fc9e6b"
+  },
+  {
+   "shipmentId": "TR-ETS-DEMO-0003-202609-C02",
+   "passportId": 10,
+   "importer": "0x23618e81E3f5cdF7f54C3d65f7FBc0aBf5B21E8f",
+   "txHash": "0xf0ab16817bb1dbc34615a5ddfcad8153d8e6ef1ea859c9dda5110812d42b0058"
+  },
+  {
+   "shipmentId": "TR-ETS-DEMO-0003-202609-C03",
+   "passportId": 10,
+   "importer": "0x14dC79964da2C08b23698B3D3cc7Ca32193d9955",
+   "txHash": "0xff2c8b31cb3dbe2acff0b71fa81014e85a7d08c054fdbeda8645f2dabb2290a1"
+  }
+ ]
+}

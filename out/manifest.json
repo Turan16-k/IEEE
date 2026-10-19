@@ -1,0 +1,354 @@
+{
+ "chainId": 31337,
+ "contract": "0x922D6956C99E12DFeB3224DEA977D0939758A1Fe",
+ "modelHash": "0x2a6ff07ca9e8f8e6f1c67c47c45b504d766f76d04866e0b614faf822edc57490",
+ "submissions": [
+  {
+   "tag": "01-202607-F1-original",
+   "facilityId": 1,
+   "period": 202607,
+   "kind": "original",
+   "verdict": "APPROVED",
+   "riskScore": 0,
+   "reportUri": "out/reports/01-202607-F1-original.json",
+   "evidenceUri": "out/evidence/01-202607-F1-original.json"
+  },
+  {
+   "tag": "02-202607-F2-original",
+   "facilityId": 2,
+   "period": 202607,
+   "kind": "original",
+   "verdict": "APPROVED",
+   "riskScore": 0,
+   "reportUri": "out/reports/02-202607-F2-original.json",
+   "evidenceUri": "out/evidence/02-202607-F2-original.json"
+  },
+  {
+   "tag": "03-202607-F3-original",
+   "facilityId": 3,
+   "period": 202607,
+   "kind": "original",
+   "verdict": "APPROVED",
+   "riskScore": 0,
+   "reportUri": "out/reports/03-202607-F3-original.json",
+   "evidenceUri": "out/evidence/03-202607-F3-original.json"
+  },
+  {
+   "tag": "04-202608-F1-original",
+   "facilityId": 1,
+   "period": 202608,
+   "kind": "original",
+   "verdict": "APPROVED",
+   "riskScore": 0,
+   "reportUri": "out/reports/04-202608-F1-original.json",
+   "evidenceUri": "out/evidence/04-202608-F1-original.json"
+  },
+  {
+   "tag": "05-202608-F2-original",
+   "facilityId": 2,
+   "period": 202608,
+   "kind": "original",
+   "verdict": "APPROVED",
+   "riskScore": 0,
+   "reportUri": "out/reports/05-202608-F2-original.json",
+   "evidenceUri": "out/evidence/05-202608-F2-original.json"
+  },
+  {
+   "tag": "06-202608-F3-original",
+   "facilityId": 3,
+   "period": 202608,
+   "kind": "original",
+   "verdict": "APPROVED",
+   "riskScore": 0,
+   "reportUri": "out/reports/06-202608-F3-original.json",
+   "evidenceUri": "out/evidence/06-202608-F3-original.json"
+  },
+  {
+   "tag": "07-202609-F1-original",
+   "facilityId": 1,
+   "period": 202609,
+   "kind": "original",
+   "verdict": "APPROVED",
+   "riskScore": 0,
+   "reportUri": "out/reports/07-202609-F1-original.json",
+   "evidenceUri": "out/evidence/07-202609-F1-original.json"
+  },
+  {
+   "tag": "08-202609-F2-original",
+   "facilityId": 2,
+   "period": 202609,
+   "kind": "original",
+   "verdict": "APPROVED",
+   "riskScore": 0,
+   "reportUri": "out/reports/08-202609-F2-original.json",
+   "evidenceUri": "out/evidence/08-202609-F2-original.json"
+  },
+  {
+   "tag": "09-202609-F3-original",
+   "facilityId": 3,
+   "period": 202609,
+   "kind": "original",
+   "verdict": "FLAGGED",
+   "riskScore": 1000,
+   "reportUri": "out/reports/09-202609-F3-original.json",
+   "evidenceUri": "out/evidence/09-202609-F3-original.json"
+  },
+  {
+   "tag": "10-202609-F3-correction",
+   "facilityId": 3,
+   "period": 202609,
+   "kind": "correction",
+   "verdict": "APPROVED",
+   "riskScore": 0,
+   "reportUri": "out/reports/10-202609-F3-correction.json",
+   "evidenceUri": "out/evidence/10-202609-F3-correction.json"
+  }
+ ],
+ "disclosures": [
+  {
+   "uri": "out/disclosures/TR-ETS-DEMO-0001-202607-O01.json",
+   "submissionTag": "01-202607-F1-original",
+   "shipmentId": "TR-ETS-DEMO-0001-202607-O01",
+   "importer": "0x14dC79964da2C08b23698B3D3cc7Ca32193d9955",
+   "verdict": "APPROVED"
+  },
+  {
+   "uri": "out/disclosures/TR-ETS-DEMO-0001-202607-O02.json",
+   "submissionTag": "01-202607-F1-original",
+   "shipmentId": "TR-ETS-DEMO-0001-202607-O02",
+   "importer": "0x23618e81E3f5cdF7f54C3d65f7FBc0aBf5B21E8f",
+   "verdict": "APPROVED"
+  },
+  {
+   "uri": "out/disclosures/TR-ETS-DEMO-0001-202607-O03.json",
+   "submissionTag": "01-202607-F1-original",
+   "shipmentId": "TR-ETS-DEMO-0001-202607-O03",
+   "importer": "0x14dC79964da2C08b23698B3D3cc7Ca32193d9955",
+   "verdict": "APPROVED"
+  },
+  {
+   "uri": "out/disclosures/TR-ETS-DEMO-0002-202607-O01.json",
+   "submissionTag": "02-202607-F2-original",
+   "shipmentId": "TR-ETS-DEMO-0002-202607-O01",
+   "importer": "0x14dC79964da2C08b23698B3D3cc7Ca32193d9955",
+   "verdict": "APPROVED"
+  },
+  {
+   "uri": "out/disclosures/TR-ETS-DEMO-0002-202607-O02.json",
+   "submissionTag": "02-202607-F2-original",
+   "shipmentId": "TR-ETS-DEMO-0002-202607-O02",
+   "importer": "0x23618e81E3f5cdF7f54C3d65f7FBc0aBf5B21E8f",
+   "verdict": "APPROVED"
+  },
+  {
+   "uri": "out/disclosures/TR-ETS-DEMO-0002-202607-O03.json",
+   "submissionTag": "02-202607-F2-original",
+   "shipmentId": "TR-ETS-DEMO-0002-202607-O03",
+   "importer": "0x14dC79964da2C08b23698B3D3cc7Ca32193d9955",
+   "verdict": "APPROVED"
+  },
+  {
+   "uri": "out/disclosures/TR-ETS-DEMO-0003-202607-O01.json",
+   "submissionTag": "03-202607-F3-original",
+   "shipmentId": "TR-ETS-DEMO-0003-202607-O01",
+   "importer": "0x14dC79964da2C08b23698B3D3cc7Ca32193d9955",
+   "verdict": "APPROVED"
+  },
+  {
+   "uri": "out/disclosures/TR-ETS-DEMO-0003-202607-O02.json",
+   "submissionTag": "03-202607-F3-original",
+   "shipmentId": "TR-ETS-DEMO-0003-202607-O02",
+   "importer": "0x23618e81E3f5cdF7f54C3d65f7FBc0aBf5B21E8f",
+   "verdict": "APPROVED"
+  },
+  {
+   "uri": "out/disclosures/TR-ETS-DEMO-0003-202607-O03.json",
+   "submissionTag": "03-202607-F3-original",
+   "shipmentId": "TR-ETS-DEMO-0003-202607-O03",
+   "importer": "0x14dC79964da2C08b23698B3D3cc7Ca32193d9955",
+   "verdict": "APPROVED"
+  },
+  {
+   "uri": "out/disclosures/TR-ETS-DEMO-0003-202607-O04.json",
+   "submissionTag": "03-202607-F3-original",
+   "shipmentId": "TR-ETS-DEMO-0003-202607-O04",
+   "importer": "0x23618e81E3f5cdF7f54C3d65f7FBc0aBf5B21E8f",
+   "verdict": "APPROVED"
+  },
+  {
+   "uri": "out/disclosures/TR-ETS-DEMO-0001-202608-O01.json",
+   "submissionTag": "04-202608-F1-original",
+   "shipmentId": "TR-ETS-DEMO-0001-202608-O01",
+   "importer": "0x14dC79964da2C08b23698B3D3cc7Ca32193d9955",
+   "verdict": "APPROVED"
+  },
+  {
+   "uri": "out/disclosures/TR-ETS-DEMO-0001-202608-O02.json",
+   "submissionTag": "04-202608-F1-original",
+   "shipmentId": "TR-ETS-DEMO-0001-202608-O02",
+   "importer": "0x23618e81E3f5cdF7f54C3d65f7FBc0aBf5B21E8f",
+   "verdict": "APPROVED"
+  },
+  {
+   "uri": "out/disclosures/TR-ETS-DEMO-0001-202608-O03.json",
+   "submissionTag": "04-202608-F1-original",
+   "shipmentId": "TR-ETS-DEMO-0001-202608-O03",
+   "importer": "0x14dC79964da2C08b23698B3D3cc7Ca32193d9955",
+   "verdict": "APPROVED"
+  },
+  {
+   "uri": "out/disclosures/TR-ETS-DEMO-0002-202608-O01.json",
+   "submissionTag": "05-202608-F2-original",
+   "shipmentId": "TR-ETS-DEMO-0002-202608-O01",
+   "importer": "0x14dC79964da2C08b23698B3D3cc7Ca32193d9955",
+   "verdict": "APPROVED"
+  },
+  {
+   "uri": "out/disclosures/TR-ETS-DEMO-0002-202608-O02.json",
+   "submissionTag": "05-202608-F2-original",
+   "shipmentId": "TR-ETS-DEMO-0002-202608-O02",
+   "importer": "0x23618e81E3f5cdF7f54C3d65f7FBc0aBf5B21E8f",
+   "verdict": "APPROVED"
+  },
+  {
+   "uri": "out/disclosures/TR-ETS-DEMO-0002-202608-O03.json",
+   "submissionTag": "05-202608-F2-original",
+   "shipmentId": "TR-ETS-DEMO-0002-202608-O03",
+   "importer": "0x14dC79964da2C08b23698B3D3cc7Ca32193d9955",
+   "verdict": "APPROVED"
+  },
+  {
+   "uri": "out/disclosures/TR-ETS-DEMO-0003-202608-O01.json",
+   "submissionTag": "06-202608-F3-original",
+   "shipmentId": "TR-ETS-DEMO-0003-202608-O01",
+   "importer": "0x14dC79964da2C08b23698B3D3cc7Ca32193d9955",
+   "verdict": "APPROVED"
+  },
+  {
+   "uri": "out/disclosures/TR-ETS-DEMO-0003-202608-O02.json",
+   "submissionTag": "06-202608-F3-original",
+   "shipmentId": "TR-ETS-DEMO-0003-202608-O02",
+   "importer": "0x23618e81E3f5cdF7f54C3d65f7FBc0aBf5B21E8f",
+   "verdict": "APPROVED"
+  },
+  {
+   "uri": "out/disclosures/TR-ETS-DEMO-0003-202608-O03.json",
+   "submissionTag": "06-202608-F3-original",
+   "shipmentId": "TR-ETS-DEMO-0003-202608-O03",
+   "importer": "0x14dC79964da2C08b23698B3D3cc7Ca32193d9955",
+   "verdict": "APPROVED"
+  },
+  {
+   "uri": "out/disclosures/TR-ETS-DEMO-0003-202608-O04.json",
+   "submissionTag": "06-202608-F3-original",
+   "shipmentId": "TR-ETS-DEMO-0003-202608-O04",
+   "importer": "0x23618e81E3f5cdF7f54C3d65f7FBc0aBf5B21E8f",
+   "verdict": "APPROVED"
+  },
+  {
+   "uri": "out/disclosures/TR-ETS-DEMO-0001-202609-O01.json",
+   "submissionTag": "07-202609-F1-original",
+   "shipmentId": "TR-ETS-DEMO-0001-202609-O01",
+   "importer": "0x14dC79964da2C08b23698B3D3cc7Ca32193d9955",
+   "verdict": "APPROVED"
+  },
+  {
+   "uri": "out/disclosures/TR-ETS-DEMO-0001-202609-O02.json",
+   "submissionTag": "07-202609-F1-original",
+   "shipmentId": "TR-ETS-DEMO-0001-202609-O02",
+   "importer": "0x23618e81E3f5cdF7f54C3d65f7FBc0aBf5B21E8f",
+   "verdict": "APPROVED"
+  },
+  {
+   "uri": "out/disclosures/TR-ETS-DEMO-0001-202609-O03.json",
+   "submissionTag": "07-202609-F1-original",
+   "shipmentId": "TR-ETS-DEMO-0001-202609-O03",
+   "importer": "0x14dC79964da2C08b23698B3D3cc7Ca32193d9955",
+   "verdict": "APPROVED"
+  },
+  {
+   "uri": "out/disclosures/TR-ETS-DEMO-0002-202609-O01.json",
+   "submissionTag": "08-202609-F2-original",
+   "shipmentId": "TR-ETS-DEMO-0002-202609-O01",
+   "importer": "0x14dC79964da2C08b23698B3D3cc7Ca32193d9955",
+   "verdict": "APPROVED"
+  },
+  {
+   "uri": "out/disclosures/TR-ETS-DEMO-0002-202609-O02.json",
+   "submissionTag": "08-202609-F2-original",
+   "shipmentId": "TR-ETS-DEMO-0002-202609-O02",
+   "importer": "0x23618e81E3f5cdF7f54C3d65f7FBc0aBf5B21E8f",
+   "verdict": "APPROVED"
+  },
+  {
+   "uri": "out/disclosures/TR-ETS-DEMO-0002-202609-O03.json",
+   "submissionTag": "08-202609-F2-original",
+   "shipmentId": "TR-ETS-DEMO-0002-202609-O03",
+   "importer": "0x14dC79964da2C08b23698B3D3cc7Ca32193d9955",
+   "verdict": "APPROVED"
+  },
+  {
+   "uri": "out/disclosures/TR-ETS-DEMO-0003-202609-O01.json",
+   "submissionTag": "09-202609-F3-original",
+   "shipmentId": "TR-ETS-DEMO-0003-202609-O01",
+   "importer": "0x14dC79964da2C08b23698B3D3cc7Ca32193d9955",
+   "verdict": "FLAGGED"
+  },
+  {
+   "uri": "out/disclosures/TR-ETS-DEMO-0003-202609-O02.json",
+   "submissionTag": "09-202609-F3-original",
+   "shipmentId": "TR-ETS-DEMO-0003-202609-O02",
+   "importer": "0x23618e81E3f5cdF7f54C3d65f7FBc0aBf5B21E8f",
+   "verdict": "FLAGGED"
+  },
+  {
+   "uri": "out/disclosures/TR-ETS-DEMO-0003-202609-O03.json",
+   "submissionTag": "09-202609-F3-original",
+   "shipmentId": "TR-ETS-DEMO-0003-202609-O03",
+   "importer": "0x14dC79964da2C08b23698B3D3cc7Ca32193d9955",
+   "verdict": "FLAGGED"
+  },
+  {
+   "uri": "out/disclosures/TR-ETS-DEMO-0003-202609-O04.json",
+   "submissionTag": "09-202609-F3-original",
+   "shipmentId": "TR-ETS-DEMO-0003-202609-O04",
+   "importer": "0x23618e81E3f5cdF7f54C3d65f7FBc0aBf5B21E8f",
+   "verdict": "FLAGGED"
+  },
+  {
+   "uri": "out/disclosures/TR-ETS-DEMO-0003-202609-C01.json",
+   "submissionTag": "10-202609-F3-correction",
+   "shipmentId": "TR-ETS-DEMO-0003-202609-C01",
+   "importer": "0x14dC79964da2C08b23698B3D3cc7Ca32193d9955",
+   "verdict": "APPROVED"
+  },
+  {
+   "uri": "out/disclosures/TR-ETS-DEMO-0003-202609-C02.json",
+   "submissionTag": "10-202609-F3-correction",
+   "shipmentId": "TR-ETS-DEMO-0003-202609-C02",
+   "importer": "0x23618e81E3f5cdF7f54C3d65f7FBc0aBf5B21E8f",
+   "verdict": "APPROVED"
+  },
+  {
+   "uri": "out/disclosures/TR-ETS-DEMO-0003-202609-C03.json",
+   "submissionTag": "10-202609-F3-correction",
+   "shipmentId": "TR-ETS-DEMO-0003-202609-C03",
+   "importer": "0x14dC79964da2C08b23698B3D3cc7Ca32193d9955",
+   "verdict": "APPROVED"
+  },
+  {
+   "uri": "out/disclosures/TR-ETS-DEMO-0003-202609-C04.json",
+   "submissionTag": "10-202609-F3-correction",
+   "shipmentId": "TR-ETS-DEMO-0003-202609-C04",
+   "importer": "0x23618e81E3f5cdF7f54C3d65f7FBc0aBf5B21E8f",
+   "verdict": "APPROVED"
+  }
+ ],
+ "attacks": [
+  {
+   "uri": "out/attacks/09-202609-F3-original-compromised-approval.json",
+   "name": "compromised-verifier-approval",
+   "targetTag": "09-202609-F3-original"
+  }
+ ]
+}

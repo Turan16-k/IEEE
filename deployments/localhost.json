@@ -1,0 +1,1864 @@
+{
+ "network": "localhost",
+ "chainId": 31337,
+ "rpcUrl": "http://127.0.0.1:8545",
+ "deployer": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+ "deployedBlock": 131,
+ "contracts": {
+  "FacilityRegistry": "0x162A433068F51e18b7d13932F27e66a3f99E6890",
+  "EmissionPassport": "0x922D6956C99E12DFeB3224DEA977D0939758A1Fe"
+ },
+ "verifierThreshold": 2,
+ "verifiers": [
+  "0x15d34AAf54267DB7D7c367839AAf71A00a2C6A65",
+  "0x9965507D1a55bcC2695C58ba16FB37d819B0A4dc",
+  "0x976EA74026E726554dB657fA54763abd0C3a0aa9"
+ ],
+ "regulator": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+ "facilities": {
+  "1": {
+   "name": "Ege Green Steel - EAF rebar mill (fictional)",
+   "installationId": "TR-ETS-DEMO-0001",
+   "sector": "IronSteel",
+   "route": "EAF",
+   "cnCode": "7214 20 00",
+   "operator": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8"
+  },
+  "2": {
+   "name": "Marmara Cement - integrated dry kiln (fictional)",
+   "installationId": "TR-ETS-DEMO-0002",
+   "sector": "Cement",
+   "route": "dry-kiln",
+   "cnCode": "2523 29 00",
+   "operator": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC"
+  },
+  "3": {
+   "name": "Anatolia Iron & Steel - BF-BOF flat products (fictional)",
+   "installationId": "TR-ETS-DEMO-0003",
+   "sector": "IronSteel",
+   "route": "BF-BOF",
+   "cnCode": "7208 51 20",
+   "operator": "0x90F79bf6EB2c4f870365E785982E1f101E93b906"
+  }
+ },
+ "importers": {
+  "A": "0x14dC79964da2C08b23698B3D3cc7Ca32193d9955",
+  "B": "0x23618e81E3f5cdF7f54C3d65f7FBc0aBf5B21E8f"
+ },
+ "trustedFeeds": {
+  "gridMeter": "0xa0Ee7A142d267C1f36714E4a8F75612F20a79720",
+  "fuelSupplier": "0xBcd4042DE499D14e55001CcbB24a551F3b954096"
+ },
+ "abi": {
+  "FacilityRegistry": [
+   {
+    "inputs": [
+     {
+      "internalType": "address",
+      "name": "admin",
+      "type": "address"
+     }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "constructor"
+   },
+   {
+    "inputs": [],
+    "name": "AccessControlBadConfirmation",
+    "type": "error"
+   },
+   {
+    "inputs": [
+     {
+      "internalType": "address",
+      "name": "account",
+      "type": "address"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "neededRole",
+      "type": "bytes32"
+     }
+    ],
+    "name": "AccessControlUnauthorizedAccount",
+    "type": "error"
+   },
+   {
+    "inputs": [
+     {
+      "internalType": "uint256",
+      "name": "facilityId",
+      "type": "uint256"
+     }
+    ],
+    "name": "UnknownFacility",
+    "type": "error"
+   },
+   {
+    "inputs": [],
+    "name": "ZeroAddress",
+    "type": "error"
+   },
+   {
+    "anonymous": false,
+    "inputs": [
+     {
+      "indexed": true,
+      "internalType": "uint256",
+      "name": "facilityId",
+      "type": "uint256"
+     },
+     {
+      "indexed": false,
+      "internalType": "string",
+      "name": "name",
+      "type": "string"
+     },
+     {
+      "indexed": false,
+      "internalType": "enum FacilityRegistry.Sector",
+      "name": "sector",
+      "type": "uint8"
+     },
+     {
+      "indexed": false,
+      "internalType": "address",
+      "name": "operatorKey",
+      "type": "address"
+     }
+    ],
+    "name": "FacilityRegistered",
+    "type": "event"
+   },
+   {
+    "anonymous": false,
+    "inputs": [
+     {
+      "indexed": true,
+      "internalType": "uint256",
+      "name": "facilityId",
+      "type": "uint256"
+     },
+     {
+      "indexed": false,
+      "internalType": "bool",
+      "name": "active",
+      "type": "bool"
+     }
+    ],
+    "name": "FacilityStatusChanged",
+    "type": "event"
+   },
+   {
+    "anonymous": false,
+    "inputs": [
+     {
+      "indexed": true,
+      "internalType": "uint256",
+      "name": "facilityId",
+      "type": "uint256"
+     },
+     {
+      "indexed": false,
+      "internalType": "address",
+      "name": "oldKey",
+      "type": "address"
+     },
+     {
+      "indexed": false,
+      "internalType": "address",
+      "name": "newKey",
+      "type": "address"
+     }
+    ],
+    "name": "OperatorKeyRotated",
+    "type": "event"
+   },
+   {
+    "anonymous": false,
+    "inputs": [
+     {
+      "indexed": true,
+      "internalType": "bytes32",
+      "name": "role",
+      "type": "bytes32"
+     },
+     {
+      "indexed": true,
+      "internalType": "bytes32",
+      "name": "previousAdminRole",
+      "type": "bytes32"
+     },
+     {
+      "indexed": true,
+      "internalType": "bytes32",
+      "name": "newAdminRole",
+      "type": "bytes32"
+     }
+    ],
+    "name": "RoleAdminChanged",
+    "type": "event"
+   },
+   {
+    "anonymous": false,
+    "inputs": [
+     {
+      "indexed": true,
+      "internalType": "bytes32",
+      "name": "role",
+      "type": "bytes32"
+     },
+     {
+      "indexed": true,
+      "internalType": "address",
+      "name": "account",
+      "type": "address"
+     },
+     {
+      "indexed": true,
+      "internalType": "address",
+      "name": "sender",
+      "type": "address"
+     }
+    ],
+    "name": "RoleGranted",
+    "type": "event"
+   },
+   {
+    "anonymous": false,
+    "inputs": [
+     {
+      "indexed": true,
+      "internalType": "bytes32",
+      "name": "role",
+      "type": "bytes32"
+     },
+     {
+      "indexed": true,
+      "internalType": "address",
+      "name": "account",
+      "type": "address"
+     },
+     {
+      "indexed": true,
+      "internalType": "address",
+      "name": "sender",
+      "type": "address"
+     }
+    ],
+    "name": "RoleRevoked",
+    "type": "event"
+   },
+   {
+    "inputs": [],
+    "name": "DEFAULT_ADMIN_ROLE",
+    "outputs": [
+     {
+      "internalType": "bytes32",
+      "name": "",
+      "type": "bytes32"
+     }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+   },
+   {
+    "inputs": [],
+    "name": "REGISTRAR_ROLE",
+    "outputs": [
+     {
+      "internalType": "bytes32",
+      "name": "",
+      "type": "bytes32"
+     }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+   },
+   {
+    "inputs": [],
+    "name": "facilityCount",
+    "outputs": [
+     {
+      "internalType": "uint256",
+      "name": "",
+      "type": "uint256"
+     }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+   },
+   {
+    "inputs": [
+     {
+      "internalType": "uint256",
+      "name": "facilityId",
+      "type": "uint256"
+     }
+    ],
+    "name": "getFacility",
+    "outputs": [
+     {
+      "components": [
+       {
+        "internalType": "string",
+        "name": "name",
+        "type": "string"
+       },
+       {
+        "internalType": "string",
+        "name": "installationId",
+        "type": "string"
+       },
+       {
+        "internalType": "string",
+        "name": "country",
+        "type": "string"
+       },
+       {
+        "internalType": "enum FacilityRegistry.Sector",
+        "name": "sector",
+        "type": "uint8"
+       },
+       {
+        "internalType": "string",
+        "name": "route",
+        "type": "string"
+       },
+       {
+        "internalType": "address",
+        "name": "operatorKey",
+        "type": "address"
+       },
+       {
+        "internalType": "bool",
+        "name": "active",
+        "type": "bool"
+       }
+      ],
+      "internalType": "struct FacilityRegistry.Facility",
+      "name": "",
+      "type": "tuple"
+     }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+   },
+   {
+    "inputs": [
+     {
+      "internalType": "bytes32",
+      "name": "role",
+      "type": "bytes32"
+     }
+    ],
+    "name": "getRoleAdmin",
+    "outputs": [
+     {
+      "internalType": "bytes32",
+      "name": "",
+      "type": "bytes32"
+     }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+   },
+   {
+    "inputs": [
+     {
+      "internalType": "bytes32",
+      "name": "role",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "address",
+      "name": "account",
+      "type": "address"
+     }
+    ],
+    "name": "grantRole",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+   },
+   {
+    "inputs": [
+     {
+      "internalType": "bytes32",
+      "name": "role",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "address",
+      "name": "account",
+      "type": "address"
+     }
+    ],
+    "name": "hasRole",
+    "outputs": [
+     {
+      "internalType": "bool",
+      "name": "",
+      "type": "bool"
+     }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+   },
+   {
+    "inputs": [
+     {
+      "internalType": "uint256",
+      "name": "facilityId",
+      "type": "uint256"
+     }
+    ],
+    "name": "isActive",
+    "outputs": [
+     {
+      "internalType": "bool",
+      "name": "",
+      "type": "bool"
+     }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+   },
+   {
+    "inputs": [
+     {
+      "internalType": "uint256",
+      "name": "facilityId",
+      "type": "uint256"
+     }
+    ],
+    "name": "operatorOf",
+    "outputs": [
+     {
+      "internalType": "address",
+      "name": "",
+      "type": "address"
+     }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+   },
+   {
+    "inputs": [
+     {
+      "internalType": "string",
+      "name": "name",
+      "type": "string"
+     },
+     {
+      "internalType": "string",
+      "name": "installationId",
+      "type": "string"
+     },
+     {
+      "internalType": "string",
+      "name": "country",
+      "type": "string"
+     },
+     {
+      "internalType": "enum FacilityRegistry.Sector",
+      "name": "sector",
+      "type": "uint8"
+     },
+     {
+      "internalType": "string",
+      "name": "route",
+      "type": "string"
+     },
+     {
+      "internalType": "address",
+      "name": "operatorKey",
+      "type": "address"
+     }
+    ],
+    "name": "registerFacility",
+    "outputs": [
+     {
+      "internalType": "uint256",
+      "name": "facilityId",
+      "type": "uint256"
+     }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function"
+   },
+   {
+    "inputs": [
+     {
+      "internalType": "bytes32",
+      "name": "role",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "address",
+      "name": "callerConfirmation",
+      "type": "address"
+     }
+    ],
+    "name": "renounceRole",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+   },
+   {
+    "inputs": [
+     {
+      "internalType": "bytes32",
+      "name": "role",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "address",
+      "name": "account",
+      "type": "address"
+     }
+    ],
+    "name": "revokeRole",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+   },
+   {
+    "inputs": [
+     {
+      "internalType": "uint256",
+      "name": "facilityId",
+      "type": "uint256"
+     },
+     {
+      "internalType": "address",
+      "name": "newKey",
+      "type": "address"
+     }
+    ],
+    "name": "rotateOperatorKey",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+   },
+   {
+    "inputs": [
+     {
+      "internalType": "uint256",
+      "name": "facilityId",
+      "type": "uint256"
+     },
+     {
+      "internalType": "bool",
+      "name": "active",
+      "type": "bool"
+     }
+    ],
+    "name": "setActive",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+   },
+   {
+    "inputs": [
+     {
+      "internalType": "bytes4",
+      "name": "interfaceId",
+      "type": "bytes4"
+     }
+    ],
+    "name": "supportsInterface",
+    "outputs": [
+     {
+      "internalType": "bool",
+      "name": "",
+      "type": "bool"
+     }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+   }
+  ],
+  "EmissionPassport": [
+   {
+    "inputs": [
+     {
+      "internalType": "address",
+      "name": "admin",
+      "type": "address"
+     },
+     {
+      "internalType": "contract FacilityRegistry",
+      "name": "registry_",
+      "type": "address"
+     },
+     {
+      "internalType": "uint8",
+      "name": "threshold",
+      "type": "uint8"
+     }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "constructor"
+   },
+   {
+    "inputs": [],
+    "name": "AccessControlBadConfirmation",
+    "type": "error"
+   },
+   {
+    "inputs": [
+     {
+      "internalType": "address",
+      "name": "account",
+      "type": "address"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "neededRole",
+      "type": "bytes32"
+     }
+    ],
+    "name": "AccessControlUnauthorizedAccount",
+    "type": "error"
+   },
+   {
+    "inputs": [
+     {
+      "internalType": "uint256",
+      "name": "expected",
+      "type": "uint256"
+     },
+     {
+      "internalType": "uint256",
+      "name": "got",
+      "type": "uint256"
+     }
+    ],
+    "name": "BadNonce",
+    "type": "error"
+   },
+   {
+    "inputs": [
+     {
+      "internalType": "address",
+      "name": "recovered",
+      "type": "address"
+     },
+     {
+      "internalType": "address",
+      "name": "expected",
+      "type": "address"
+     }
+    ],
+    "name": "BadOperatorSignature",
+    "type": "error"
+   },
+   {
+    "inputs": [],
+    "name": "ECDSAInvalidSignature",
+    "type": "error"
+   },
+   {
+    "inputs": [
+     {
+      "internalType": "uint256",
+      "name": "length",
+      "type": "uint256"
+     }
+    ],
+    "name": "ECDSAInvalidSignatureLength",
+    "type": "error"
+   },
+   {
+    "inputs": [
+     {
+      "internalType": "bytes32",
+      "name": "s",
+      "type": "bytes32"
+     }
+    ],
+    "name": "ECDSAInvalidSignatureS",
+    "type": "error"
+   },
+   {
+    "inputs": [
+     {
+      "internalType": "uint256",
+      "name": "facilityId",
+      "type": "uint256"
+     }
+    ],
+    "name": "InactiveFacility",
+    "type": "error"
+   },
+   {
+    "inputs": [
+     {
+      "internalType": "uint8",
+      "name": "valid",
+      "type": "uint8"
+     },
+     {
+      "internalType": "uint8",
+      "name": "required",
+      "type": "uint8"
+     }
+    ],
+    "name": "InsufficientVerifierSignatures",
+    "type": "error"
+   },
+   {
+    "inputs": [
+     {
+      "internalType": "uint32",
+      "name": "period",
+      "type": "uint32"
+     }
+    ],
+    "name": "InvalidPeriod",
+    "type": "error"
+   },
+   {
+    "inputs": [
+     {
+      "internalType": "uint16",
+      "name": "riskScore",
+      "type": "uint16"
+     }
+    ],
+    "name": "InvalidRiskScore",
+    "type": "error"
+   },
+   {
+    "inputs": [],
+    "name": "InvalidShipmentProof",
+    "type": "error"
+   },
+   {
+    "inputs": [],
+    "name": "InvalidShortString",
+    "type": "error"
+   },
+   {
+    "inputs": [],
+    "name": "InvalidThreshold",
+    "type": "error"
+   },
+   {
+    "inputs": [
+     {
+      "internalType": "uint8",
+      "name": "verdict",
+      "type": "uint8"
+     }
+    ],
+    "name": "InvalidVerdict",
+    "type": "error"
+   },
+   {
+    "inputs": [
+     {
+      "internalType": "uint256",
+      "name": "passportId",
+      "type": "uint256"
+     },
+     {
+      "internalType": "enum EmissionPassport.Status",
+      "name": "status",
+      "type": "uint8"
+     }
+    ],
+    "name": "NotRevocable",
+    "type": "error"
+   },
+   {
+    "inputs": [
+     {
+      "internalType": "uint256",
+      "name": "facilityId",
+      "type": "uint256"
+     },
+     {
+      "internalType": "uint32",
+      "name": "period",
+      "type": "uint32"
+     },
+     {
+      "internalType": "uint256",
+      "name": "passportId",
+      "type": "uint256"
+     }
+    ],
+    "name": "PeriodAlreadyApproved",
+    "type": "error"
+   },
+   {
+    "inputs": [
+     {
+      "internalType": "bytes32",
+      "name": "leaf",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "uint256",
+      "name": "passportId",
+      "type": "uint256"
+     }
+    ],
+    "name": "ShipmentAlreadyDeclared",
+    "type": "error"
+   },
+   {
+    "inputs": [
+     {
+      "internalType": "string",
+      "name": "str",
+      "type": "string"
+     }
+    ],
+    "name": "StringTooLong",
+    "type": "error"
+   },
+   {
+    "inputs": [
+     {
+      "internalType": "uint256",
+      "name": "passportId",
+      "type": "uint256"
+     }
+    ],
+    "name": "UnknownPassport",
+    "type": "error"
+   },
+   {
+    "inputs": [],
+    "name": "VerificationDoesNotMatchClaim",
+    "type": "error"
+   },
+   {
+    "inputs": [],
+    "name": "ZeroProduction",
+    "type": "error"
+   },
+   {
+    "anonymous": false,
+    "inputs": [],
+    "name": "EIP712DomainChanged",
+    "type": "event"
+   },
+   {
+    "anonymous": false,
+    "inputs": [
+     {
+      "indexed": true,
+      "internalType": "uint256",
+      "name": "passportId",
+      "type": "uint256"
+     },
+     {
+      "indexed": true,
+      "internalType": "uint256",
+      "name": "facilityId",
+      "type": "uint256"
+     },
+     {
+      "indexed": false,
+      "internalType": "uint32",
+      "name": "period",
+      "type": "uint32"
+     },
+     {
+      "indexed": false,
+      "internalType": "enum EmissionPassport.Status",
+      "name": "status",
+      "type": "uint8"
+     },
+     {
+      "indexed": false,
+      "internalType": "uint16",
+      "name": "riskScore",
+      "type": "uint16"
+     },
+     {
+      "indexed": false,
+      "internalType": "uint8",
+      "name": "verifierSignatures",
+      "type": "uint8"
+     },
+     {
+      "indexed": false,
+      "internalType": "bytes32",
+      "name": "reportHash",
+      "type": "bytes32"
+     }
+    ],
+    "name": "PassportIssued",
+    "type": "event"
+   },
+   {
+    "anonymous": false,
+    "inputs": [
+     {
+      "indexed": true,
+      "internalType": "uint256",
+      "name": "passportId",
+      "type": "uint256"
+     },
+     {
+      "indexed": true,
+      "internalType": "address",
+      "name": "by",
+      "type": "address"
+     },
+     {
+      "indexed": false,
+      "internalType": "string",
+      "name": "reason",
+      "type": "string"
+     }
+    ],
+    "name": "PassportRevoked",
+    "type": "event"
+   },
+   {
+    "anonymous": false,
+    "inputs": [
+     {
+      "indexed": true,
+      "internalType": "bytes32",
+      "name": "role",
+      "type": "bytes32"
+     },
+     {
+      "indexed": true,
+      "internalType": "bytes32",
+      "name": "previousAdminRole",
+      "type": "bytes32"
+     },
+     {
+      "indexed": true,
+      "internalType": "bytes32",
+      "name": "newAdminRole",
+      "type": "bytes32"
+     }
+    ],
+    "name": "RoleAdminChanged",
+    "type": "event"
+   },
+   {
+    "anonymous": false,
+    "inputs": [
+     {
+      "indexed": true,
+      "internalType": "bytes32",
+      "name": "role",
+      "type": "bytes32"
+     },
+     {
+      "indexed": true,
+      "internalType": "address",
+      "name": "account",
+      "type": "address"
+     },
+     {
+      "indexed": true,
+      "internalType": "address",
+      "name": "sender",
+      "type": "address"
+     }
+    ],
+    "name": "RoleGranted",
+    "type": "event"
+   },
+   {
+    "anonymous": false,
+    "inputs": [
+     {
+      "indexed": true,
+      "internalType": "bytes32",
+      "name": "role",
+      "type": "bytes32"
+     },
+     {
+      "indexed": true,
+      "internalType": "address",
+      "name": "account",
+      "type": "address"
+     },
+     {
+      "indexed": true,
+      "internalType": "address",
+      "name": "sender",
+      "type": "address"
+     }
+    ],
+    "name": "RoleRevoked",
+    "type": "event"
+   },
+   {
+    "anonymous": false,
+    "inputs": [
+     {
+      "indexed": true,
+      "internalType": "uint256",
+      "name": "passportId",
+      "type": "uint256"
+     },
+     {
+      "indexed": true,
+      "internalType": "address",
+      "name": "importer",
+      "type": "address"
+     },
+     {
+      "indexed": false,
+      "internalType": "bytes32",
+      "name": "commitment",
+      "type": "bytes32"
+     },
+     {
+      "indexed": false,
+      "internalType": "bytes32",
+      "name": "leaf",
+      "type": "bytes32"
+     }
+    ],
+    "name": "ShipmentDeclared",
+    "type": "event"
+   },
+   {
+    "anonymous": false,
+    "inputs": [
+     {
+      "indexed": false,
+      "internalType": "uint8",
+      "name": "threshold",
+      "type": "uint8"
+     }
+    ],
+    "name": "VerifierThresholdUpdated",
+    "type": "event"
+   },
+   {
+    "inputs": [],
+    "name": "CLAIM_TYPEHASH",
+    "outputs": [
+     {
+      "internalType": "bytes32",
+      "name": "",
+      "type": "bytes32"
+     }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+   },
+   {
+    "inputs": [],
+    "name": "DEFAULT_ADMIN_ROLE",
+    "outputs": [
+     {
+      "internalType": "bytes32",
+      "name": "",
+      "type": "bytes32"
+     }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+   },
+   {
+    "inputs": [],
+    "name": "REGULATOR_ROLE",
+    "outputs": [
+     {
+      "internalType": "bytes32",
+      "name": "",
+      "type": "bytes32"
+     }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+   },
+   {
+    "inputs": [],
+    "name": "VERDICT_APPROVED",
+    "outputs": [
+     {
+      "internalType": "uint8",
+      "name": "",
+      "type": "uint8"
+     }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+   },
+   {
+    "inputs": [],
+    "name": "VERDICT_FLAGGED",
+    "outputs": [
+     {
+      "internalType": "uint8",
+      "name": "",
+      "type": "uint8"
+     }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+   },
+   {
+    "inputs": [],
+    "name": "VERIFICATION_TYPEHASH",
+    "outputs": [
+     {
+      "internalType": "bytes32",
+      "name": "",
+      "type": "bytes32"
+     }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+   },
+   {
+    "inputs": [],
+    "name": "VERIFIER_ROLE",
+    "outputs": [
+     {
+      "internalType": "bytes32",
+      "name": "",
+      "type": "bytes32"
+     }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+   },
+   {
+    "inputs": [],
+    "name": "declarationCount",
+    "outputs": [
+     {
+      "internalType": "uint256",
+      "name": "",
+      "type": "uint256"
+     }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+   },
+   {
+    "inputs": [
+     {
+      "internalType": "uint256",
+      "name": "passportId",
+      "type": "uint256"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "commitment",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "bytes32[]",
+      "name": "proof",
+      "type": "bytes32[]"
+     }
+    ],
+    "name": "declareShipment",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+   },
+   {
+    "inputs": [
+     {
+      "internalType": "bytes32",
+      "name": "",
+      "type": "bytes32"
+     }
+    ],
+    "name": "declaredUnder",
+    "outputs": [
+     {
+      "internalType": "uint256",
+      "name": "",
+      "type": "uint256"
+     }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+   },
+   {
+    "inputs": [],
+    "name": "domainSeparator",
+    "outputs": [
+     {
+      "internalType": "bytes32",
+      "name": "",
+      "type": "bytes32"
+     }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+   },
+   {
+    "inputs": [],
+    "name": "eip712Domain",
+    "outputs": [
+     {
+      "internalType": "bytes1",
+      "name": "fields",
+      "type": "bytes1"
+     },
+     {
+      "internalType": "string",
+      "name": "name",
+      "type": "string"
+     },
+     {
+      "internalType": "string",
+      "name": "version",
+      "type": "string"
+     },
+     {
+      "internalType": "uint256",
+      "name": "chainId",
+      "type": "uint256"
+     },
+     {
+      "internalType": "address",
+      "name": "verifyingContract",
+      "type": "address"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "salt",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "uint256[]",
+      "name": "extensions",
+      "type": "uint256[]"
+     }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+   },
+   {
+    "inputs": [
+     {
+      "internalType": "uint256",
+      "name": "",
+      "type": "uint256"
+     }
+    ],
+    "name": "facilityNonce",
+    "outputs": [
+     {
+      "internalType": "uint256",
+      "name": "",
+      "type": "uint256"
+     }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+   },
+   {
+    "inputs": [
+     {
+      "internalType": "uint256",
+      "name": "passportId",
+      "type": "uint256"
+     }
+    ],
+    "name": "getPassport",
+    "outputs": [
+     {
+      "components": [
+       {
+        "internalType": "uint256",
+        "name": "facilityId",
+        "type": "uint256"
+       },
+       {
+        "internalType": "uint32",
+        "name": "period",
+        "type": "uint32"
+       },
+       {
+        "internalType": "uint256",
+        "name": "productionTonnes",
+        "type": "uint256"
+       },
+       {
+        "internalType": "uint256",
+        "name": "directEmissionsKg",
+        "type": "uint256"
+       },
+       {
+        "internalType": "uint256",
+        "name": "indirectEmissionsKg",
+        "type": "uint256"
+       },
+       {
+        "internalType": "bytes32",
+        "name": "shipmentsRoot",
+        "type": "bytes32"
+       },
+       {
+        "internalType": "bytes32",
+        "name": "evidenceHash",
+        "type": "bytes32"
+       },
+       {
+        "internalType": "bytes32",
+        "name": "claimDigest",
+        "type": "bytes32"
+       },
+       {
+        "internalType": "uint16",
+        "name": "riskScore",
+        "type": "uint16"
+       },
+       {
+        "internalType": "bytes32",
+        "name": "modelHash",
+        "type": "bytes32"
+       },
+       {
+        "internalType": "bytes32",
+        "name": "reportHash",
+        "type": "bytes32"
+       },
+       {
+        "internalType": "uint8",
+        "name": "verifierSignatures",
+        "type": "uint8"
+       },
+       {
+        "internalType": "enum EmissionPassport.Status",
+        "name": "status",
+        "type": "uint8"
+       },
+       {
+        "internalType": "uint64",
+        "name": "issuedAt",
+        "type": "uint64"
+       },
+       {
+        "internalType": "string",
+        "name": "revocationReason",
+        "type": "string"
+       }
+      ],
+      "internalType": "struct EmissionPassport.Passport",
+      "name": "",
+      "type": "tuple"
+     }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+   },
+   {
+    "inputs": [
+     {
+      "internalType": "bytes32",
+      "name": "role",
+      "type": "bytes32"
+     }
+    ],
+    "name": "getRoleAdmin",
+    "outputs": [
+     {
+      "internalType": "bytes32",
+      "name": "",
+      "type": "bytes32"
+     }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+   },
+   {
+    "inputs": [
+     {
+      "internalType": "bytes32",
+      "name": "role",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "address",
+      "name": "account",
+      "type": "address"
+     }
+    ],
+    "name": "grantRole",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+   },
+   {
+    "inputs": [
+     {
+      "internalType": "bytes32",
+      "name": "role",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "address",
+      "name": "account",
+      "type": "address"
+     }
+    ],
+    "name": "hasRole",
+    "outputs": [
+     {
+      "internalType": "bool",
+      "name": "",
+      "type": "bool"
+     }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+   },
+   {
+    "inputs": [
+     {
+      "components": [
+       {
+        "internalType": "uint256",
+        "name": "facilityId",
+        "type": "uint256"
+       },
+       {
+        "internalType": "uint32",
+        "name": "period",
+        "type": "uint32"
+       },
+       {
+        "internalType": "uint256",
+        "name": "productionTonnes",
+        "type": "uint256"
+       },
+       {
+        "internalType": "uint256",
+        "name": "directEmissionsKg",
+        "type": "uint256"
+       },
+       {
+        "internalType": "uint256",
+        "name": "indirectEmissionsKg",
+        "type": "uint256"
+       },
+       {
+        "internalType": "bytes32",
+        "name": "shipmentsRoot",
+        "type": "bytes32"
+       },
+       {
+        "internalType": "bytes32",
+        "name": "evidenceHash",
+        "type": "bytes32"
+       },
+       {
+        "internalType": "uint256",
+        "name": "nonce",
+        "type": "uint256"
+       }
+      ],
+      "internalType": "struct EmissionPassport.EmissionClaim",
+      "name": "c",
+      "type": "tuple"
+     }
+    ],
+    "name": "hashClaim",
+    "outputs": [
+     {
+      "internalType": "bytes32",
+      "name": "",
+      "type": "bytes32"
+     }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+   },
+   {
+    "inputs": [
+     {
+      "components": [
+       {
+        "internalType": "bytes32",
+        "name": "claimDigest",
+        "type": "bytes32"
+       },
+       {
+        "internalType": "uint8",
+        "name": "verdict",
+        "type": "uint8"
+       },
+       {
+        "internalType": "uint16",
+        "name": "riskScore",
+        "type": "uint16"
+       },
+       {
+        "internalType": "bytes32",
+        "name": "modelHash",
+        "type": "bytes32"
+       },
+       {
+        "internalType": "bytes32",
+        "name": "reportHash",
+        "type": "bytes32"
+       }
+      ],
+      "internalType": "struct EmissionPassport.Verification",
+      "name": "v",
+      "type": "tuple"
+     }
+    ],
+    "name": "hashVerification",
+    "outputs": [
+     {
+      "internalType": "bytes32",
+      "name": "",
+      "type": "bytes32"
+     }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+   },
+   {
+    "inputs": [],
+    "name": "passportCount",
+    "outputs": [
+     {
+      "internalType": "uint256",
+      "name": "",
+      "type": "uint256"
+     }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+   },
+   {
+    "inputs": [
+     {
+      "internalType": "uint256",
+      "name": "",
+      "type": "uint256"
+     },
+     {
+      "internalType": "uint32",
+      "name": "",
+      "type": "uint32"
+     }
+    ],
+    "name": "passportOf",
+    "outputs": [
+     {
+      "internalType": "uint256",
+      "name": "",
+      "type": "uint256"
+     }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+   },
+   {
+    "inputs": [],
+    "name": "registry",
+    "outputs": [
+     {
+      "internalType": "contract FacilityRegistry",
+      "name": "",
+      "type": "address"
+     }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+   },
+   {
+    "inputs": [
+     {
+      "internalType": "bytes32",
+      "name": "role",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "address",
+      "name": "callerConfirmation",
+      "type": "address"
+     }
+    ],
+    "name": "renounceRole",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+   },
+   {
+    "inputs": [
+     {
+      "internalType": "uint256",
+      "name": "passportId",
+      "type": "uint256"
+     },
+     {
+      "internalType": "string",
+      "name": "reason",
+      "type": "string"
+     }
+    ],
+    "name": "revokePassport",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+   },
+   {
+    "inputs": [
+     {
+      "internalType": "bytes32",
+      "name": "role",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "address",
+      "name": "account",
+      "type": "address"
+     }
+    ],
+    "name": "revokeRole",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+   },
+   {
+    "inputs": [
+     {
+      "internalType": "uint8",
+      "name": "threshold",
+      "type": "uint8"
+     }
+    ],
+    "name": "setVerifierThreshold",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+   },
+   {
+    "inputs": [
+     {
+      "internalType": "address",
+      "name": "importer",
+      "type": "address"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "commitment",
+      "type": "bytes32"
+     }
+    ],
+    "name": "shipmentLeaf",
+    "outputs": [
+     {
+      "internalType": "bytes32",
+      "name": "",
+      "type": "bytes32"
+     }
+    ],
+    "stateMutability": "pure",
+    "type": "function"
+   },
+   {
+    "inputs": [
+     {
+      "internalType": "uint256",
+      "name": "passportId",
+      "type": "uint256"
+     }
+    ],
+    "name": "specificEmissions",
+    "outputs": [
+     {
+      "internalType": "uint256",
+      "name": "directKgPerT",
+      "type": "uint256"
+     },
+     {
+      "internalType": "uint256",
+      "name": "indirectKgPerT",
+      "type": "uint256"
+     }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+   },
+   {
+    "inputs": [
+     {
+      "components": [
+       {
+        "internalType": "uint256",
+        "name": "facilityId",
+        "type": "uint256"
+       },
+       {
+        "internalType": "uint32",
+        "name": "period",
+        "type": "uint32"
+       },
+       {
+        "internalType": "uint256",
+        "name": "productionTonnes",
+        "type": "uint256"
+       },
+       {
+        "internalType": "uint256",
+        "name": "directEmissionsKg",
+        "type": "uint256"
+       },
+       {
+        "internalType": "uint256",
+        "name": "indirectEmissionsKg",
+        "type": "uint256"
+       },
+       {
+        "internalType": "bytes32",
+        "name": "shipmentsRoot",
+        "type": "bytes32"
+       },
+       {
+        "internalType": "bytes32",
+        "name": "evidenceHash",
+        "type": "bytes32"
+       },
+       {
+        "internalType": "uint256",
+        "name": "nonce",
+        "type": "uint256"
+       }
+      ],
+      "internalType": "struct EmissionPassport.EmissionClaim",
+      "name": "claim",
+      "type": "tuple"
+     },
+     {
+      "internalType": "bytes",
+      "name": "operatorSignature",
+      "type": "bytes"
+     },
+     {
+      "components": [
+       {
+        "internalType": "bytes32",
+        "name": "claimDigest",
+        "type": "bytes32"
+       },
+       {
+        "internalType": "uint8",
+        "name": "verdict",
+        "type": "uint8"
+       },
+       {
+        "internalType": "uint16",
+        "name": "riskScore",
+        "type": "uint16"
+       },
+       {
+        "internalType": "bytes32",
+        "name": "modelHash",
+        "type": "bytes32"
+       },
+       {
+        "internalType": "bytes32",
+        "name": "reportHash",
+        "type": "bytes32"
+       }
+      ],
+      "internalType": "struct EmissionPassport.Verification",
+      "name": "verification",
+      "type": "tuple"
+     },
+     {
+      "internalType": "bytes[]",
+      "name": "verifierSignatures",
+      "type": "bytes[]"
+     }
+    ],
+    "name": "submitPassport",
+    "outputs": [
+     {
+      "internalType": "uint256",
+      "name": "passportId",
+      "type": "uint256"
+     }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function"
+   },
+   {
+    "inputs": [
+     {
+      "internalType": "bytes4",
+      "name": "interfaceId",
+      "type": "bytes4"
+     }
+    ],
+    "name": "supportsInterface",
+    "outputs": [
+     {
+      "internalType": "bool",
+      "name": "",
+      "type": "bool"
+     }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+   },
+   {
+    "inputs": [],
+    "name": "verifierThreshold",
+    "outputs": [
+     {
+      "internalType": "uint8",
+      "name": "",
+      "type": "uint8"
+     }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+   },
+   {
+    "inputs": [
+     {
+      "internalType": "uint256",
+      "name": "passportId",
+      "type": "uint256"
+     },
+     {
+      "internalType": "address",
+      "name": "importer",
+      "type": "address"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "commitment",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "bytes32[]",
+      "name": "proof",
+      "type": "bytes32[]"
+     }
+    ],
+    "name": "verifyShipment",
+    "outputs": [
+     {
+      "internalType": "bool",
+      "name": "",
+      "type": "bool"
+     }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+   }
+  ]
+ }
+}

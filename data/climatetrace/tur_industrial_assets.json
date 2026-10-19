@@ -1,0 +1,1488 @@
+{
+ "source": "Climate TRACE API v6 (CC-BY 4.0)",
+ "url": "https://api.climatetrace.org/v6/assets",
+ "country": "TUR",
+ "retrievedAt": "2026-10-19T17:41:27+00:00",
+ "assets": [
+  {
+   "id": 1567071,
+   "name": "Isdemir Payas steel plant",
+   "sector": "iron-and-steel",
+   "assetType": "BF/BOF",
+   "owners": [
+    "Iskenderun Demir ve Celik AŞ",
+    "Iskenderun Demir ve Celik AŞ",
+    "Iskenderun Demir ve Celik AŞ",
+    "Iskenderun Demir ve Celik AŞ"
+   ],
+   "emissionsT": 9736897.741488256,
+   "activity": 5124683.021835924,
+   "activityUnits": "t of steel",
+   "emissionsFactor": 1.9,
+   "emissionsFactorUnits": "t of CO2e_100yr per t of steel",
+   "capacity": 5799999.999999998,
+   "capacityUnits": "t of steel"
+  },
+  {
+   "id": 1567073,
+   "name": "Kardemir Merkez steel plant",
+   "sector": "iron-and-steel",
+   "assetType": "BF/BOF",
+   "owners": [
+    "Kardemir Karabuk Demir Çelik Sanayi Ve Ticaret AŞ"
+   ],
+   "emissionsT": 5817628.9445896065,
+   "activity": 3061909.9708366357,
+   "activityUnits": "t of steel",
+   "emissionsFactor": 1.8999999999999995,
+   "emissionsFactorUnits": "t of CO2e_100yr per t of steel",
+   "capacity": 3501000,
+   "capacityUnits": "t of steel"
+  },
+  {
+   "id": 1567067,
+   "name": "Erdemir Eregli steel plant",
+   "sector": "iron-and-steel",
+   "assetType": "BF/BOF",
+   "owners": [
+    "Eregli Demir ve Celik Fabrikalari AŞ",
+    "Eregli Demir ve Celik Fabrikalari AŞ",
+    "Eregli Demir ve Celik Fabrikalari AŞ",
+    "Eregli Demir ve Celik Fabrikalari AŞ"
+   ],
+   "emissionsT": 5233027.168951267,
+   "activity": 2754224.8257638253,
+   "activityUnits": "t of steel",
+   "emissionsFactor": 1.8999999999999997,
+   "emissionsFactorUnits": "t of CO2e_100yr per t of steel",
+   "capacity": 3801000.000000001,
+   "capacityUnits": "t of steel"
+  },
+  {
+   "id": 1567068,
+   "name": "Habas Aliaga steel plant",
+   "sector": "iron-and-steel",
+   "assetType": "EAF",
+   "owners": [
+    "Habas Industrial and Medical Gases Production Industries AŞ",
+    "Habas Industrial and Medical Gases Production Industries AŞ"
+   ],
+   "emissionsT": 743740.6995056,
+   "activity": 2722330.5252767205,
+   "activityUnits": "t of steel",
+   "emissionsFactor": 0.2732,
+   "emissionsFactorUnits": "t of CO2e_100yr per t of steel",
+   "capacity": 4500000,
+   "capacityUnits": "t of steel"
+  },
+  {
+   "id": 1567063,
+   "name": "Colakoglu Metallurgical Dilovasi steel plant",
+   "sector": "iron-and-steel",
+   "assetType": "EAF",
+   "owners": [
+    "Çolakoğlu Metalürji AŞ",
+    "Çolakoğlu Metalürji AŞ"
+   ],
+   "emissionsT": 693649.8178405084,
+   "activity": 2722330.5252767205,
+   "activityUnits": "t of steel",
+   "emissionsFactor": 0.2548,
+   "emissionsFactorUnits": "t of CO2e_100yr per t of steel",
+   "capacity": 4500000,
+   "capacityUnits": "t of steel"
+  },
+  {
+   "id": 1567076,
+   "name": "MMK Türkiye Metallurgical Payas steel plant",
+   "sector": "iron-and-steel",
+   "assetType": "EAF",
+   "owners": [
+    "MMK Metalurji Sanayi Ticaret ve Liman Isletmeciligi AŞ",
+    "MMK Metalurji Sanayi Ticaret ve Liman Isletmeciligi AŞ",
+    "MMK Metalurji Sanayi Ticaret ve Liman Isletmeciligi AŞ"
+   ],
+   "emissionsT": 678314.0225481162,
+   "activity": 1391413.3795858794,
+   "activityUnits": "t of steel",
+   "emissionsFactor": 0.4875,
+   "emissionsFactorUnits": "t of CO2e_100yr per t of steel",
+   "capacity": 2300000,
+   "capacityUnits": "t of steel"
+  },
+  {
+   "id": 1567069,
+   "name": "İÇDAŞ Biga steel plant",
+   "sector": "iron-and-steel",
+   "assetType": "EAF",
+   "owners": [
+    "Içdaş Çelik Enerji Tersane Ve Ulaşim Sanayi AŞ",
+    "Içdaş Çelik Enerji Tersane Ve Ulaşim Sanayi AŞ"
+   ],
+   "emissionsT": 297641.47076358815,
+   "activity": 3024811.694751912,
+   "activityUnits": "t of steel",
+   "emissionsFactor": 0.09840000000000002,
+   "emissionsFactorUnits": "t of CO2e_100yr per t of steel",
+   "capacity": 5000000,
+   "capacityUnits": "t of steel"
+  },
+  {
+   "id": 1567065,
+   "name": "Ege Steel Aliaga plant",
+   "sector": "iron-and-steel",
+   "assetType": "EAF",
+   "owners": [
+    "Ege Celik Endustrisi Sanayi ve Ticaret AŞ",
+    "Ege Celik Endustrisi Sanayi ve Ticaret AŞ"
+   ],
+   "emissionsT": 271071.8189530552,
+   "activity": 967939.7423206118,
+   "activityUnits": "t of steel",
+   "emissionsFactor": 0.28005030385793145,
+   "emissionsFactorUnits": "t of CO2e_100yr per t of steel",
+   "capacity": 1600000.0000000002,
+   "capacityUnits": "t of steel"
+  },
+  {
+   "id": 1567189,
+   "name": "Toscelik Iskenderun steel plant",
+   "sector": "iron-and-steel",
+   "assetType": "EAF",
+   "owners": [
+    "Toscelik Profil ve Sac Endustrisi AS",
+    "Toscelik Profil ve Sac Endustrisi AS"
+   ],
+   "emissionsT": 215850.56253749644,
+   "activity": 2419849.3558015297,
+   "activityUnits": "t of steel",
+   "emissionsFactor": 0.0892,
+   "emissionsFactorUnits": "t of CO2e_100yr per t of steel",
+   "capacity": 3999999.9999999995,
+   "capacityUnits": "t of steel"
+  },
+  {
+   "id": 1567086,
+   "name": "Kardemir Celik Sanayi Izmir steel plant",
+   "sector": "iron-and-steel",
+   "assetType": "EAF",
+   "owners": [
+    "Kardemir Karabuk Demir Çelik Sanayi Ve Ticaret AŞ"
+   ],
+   "emissionsT": 211774.85855707433,
+   "activity": 756202.923687978,
+   "activityUnits": "t of steel",
+   "emissionsFactor": 0.2800503038579314,
+   "emissionsFactorUnits": "t of CO2e_100yr per t of steel",
+   "capacity": 1250000,
+   "capacityUnits": "t of steel"
+  },
+  {
+   "id": 1567078,
+   "name": "Ozkan Iron and Steel Aliaga plant",
+   "sector": "iron-and-steel",
+   "assetType": "EAF",
+   "owners": [
+    "Ozkan Demir Celik Sanayi AŞ",
+    "Ozkan Demir Celik Sanayi AŞ"
+   ],
+   "emissionsT": 203303.8642147914,
+   "activity": 725954.8067404588,
+   "activityUnits": "t of steel",
+   "emissionsFactor": 0.28005030385793145,
+   "emissionsFactorUnits": "t of CO2e_100yr per t of steel",
+   "capacity": 1199999.9999999998,
+   "capacityUnits": "t of steel"
+  },
+  {
+   "id": 1567074,
+   "name": "Koc Metallurgical Toprakkale steel plant",
+   "sector": "iron-and-steel",
+   "assetType": "EAF",
+   "owners": [
+    "Koc Metalurji AŞ"
+   ],
+   "emissionsT": 203303.86421479136,
+   "activity": 725954.8067404589,
+   "activityUnits": "t of steel",
+   "emissionsFactor": 0.28005030385793134,
+   "emissionsFactorUnits": "t of CO2e_100yr per t of steel",
+   "capacity": 1199999.9999999998,
+   "capacityUnits": "t of steel"
+  },
+  {
+   "id": 1567190,
+   "name": "Aba Iron and Steel Payas plant",
+   "sector": "iron-and-steel",
+   "assetType": "EAF",
+   "owners": [
+    "ABA Çelik Demir LŞ"
+   ],
+   "emissionsT": 186361.87553022543,
+   "activity": 665458.5728454207,
+   "activityUnits": "t of steel",
+   "emissionsFactor": 0.2800503038579314,
+   "emissionsFactorUnits": "t of CO2e_100yr per t of steel",
+   "capacity": 1100000,
+   "capacityUnits": "t of steel"
+  },
+  {
+   "id": 1567077,
+   "name": "Mescier Iron and Steel Bartin plant",
+   "sector": "iron-and-steel",
+   "assetType": "EAF",
+   "owners": [
+    "Mescier Demir Celik AŞ",
+    "Mescier Demir Celik AŞ"
+   ],
+   "emissionsT": 169419.8868456595,
+   "activity": 604962.3389503825,
+   "activityUnits": "t of steel",
+   "emissionsFactor": 0.28005030385793134,
+   "emissionsFactorUnits": "t of CO2e_100yr per t of steel",
+   "capacity": 1000000,
+   "capacityUnits": "t of steel"
+  },
+  {
+   "id": 1567070,
+   "name": "İDÇ Izdemir Aliaga steel plant",
+   "sector": "iron-and-steel",
+   "assetType": "EAF",
+   "owners": [
+    "Izmir Demir Celik Sanayi AŞ",
+    "Izmir Demir Celik Sanayi AŞ",
+    "Izmir Demir Celik Sanayi AŞ"
+   ],
+   "emissionsT": 163631.07670106387,
+   "activity": 1400950.9991529435,
+   "activityUnits": "t of steel",
+   "emissionsFactor": 0.11680000000000004,
+   "emissionsFactorUnits": "t of CO2e_100yr per t of steel",
+   "capacity": 2329234.972677595,
+   "capacityUnits": "t of steel"
+  },
+  {
+   "id": 1567085,
+   "name": "Cebitas steel plant",
+   "sector": "iron-and-steel",
+   "assetType": "EAF",
+   "owners": [
+    "Çebitaş Demir Çelik Endüstrisi AŞ"
+   ],
+   "emissionsT": 145701.10268726715,
+   "activity": 520267.61149732885,
+   "activityUnits": "t of steel",
+   "emissionsFactor": 0.2800503038579314,
+   "emissionsFactorUnits": "t of CO2e_100yr per t of steel",
+   "capacity": 860000,
+   "capacityUnits": "t of steel"
+  },
+  {
+   "id": 1567080,
+   "name": "Toscelik Toprakkale steel plant",
+   "sector": "iron-and-steel",
+   "assetType": "EAF",
+   "owners": [
+    "Toscelik Profil ve Sac Endustrisi AS",
+    "Toscelik Profil ve Sac Endustrisi AS"
+   ],
+   "emissionsT": 107925.28126874824,
+   "activity": 1209924.6779007646,
+   "activityUnits": "t of steel",
+   "emissionsFactor": 0.08920000000000003,
+   "emissionsFactorUnits": "t of CO2e_100yr per t of steel",
+   "capacity": 2000000,
+   "capacityUnits": "t of steel"
+  },
+  {
+   "id": 1567075,
+   "name": "Kroman Steel Darica plant",
+   "sector": "iron-and-steel",
+   "assetType": "EAF",
+   "owners": [
+    "Kroman Celik Sanayii AS"
+   ],
+   "emissionsT": 97640.92150659175,
+   "activity": 907443.5084255736,
+   "activityUnits": "t of steel",
+   "emissionsFactor": 0.10760000000000004,
+   "emissionsFactorUnits": "t of CO2e_100yr per t of steel",
+   "capacity": 1500000,
+   "capacityUnits": "t of steel"
+  },
+  {
+   "id": 1567064,
+   "name": "Diler Iron and Steel Dilovasi plant",
+   "sector": "iron-and-steel",
+   "assetType": "EAF",
+   "owners": [
+    "Diler Demir Celik Endustri ve Ticaret AŞ"
+   ],
+   "emissionsT": 84622.1319723795,
+   "activity": 786451.0406354971,
+   "activityUnits": "t of steel",
+   "emissionsFactor": 0.10760000000000002,
+   "emissionsFactorUnits": "t of CO2e_100yr per t of steel",
+   "capacity": 1299999.9999999998,
+   "capacityUnits": "t of steel"
+  },
+  {
+   "id": 1567072,
+   "name": "Kaptan Ereglisi steel plant",
+   "sector": "iron-and-steel",
+   "assetType": "EAF",
+   "owners": [
+    "Kaptan Demir Celik Endustrisi Ve Ticaret AŞ",
+    "Kaptan Demir Celik Endustrisi Ve Ticaret AŞ"
+   ],
+   "emissionsT": 83339.6118138047,
+   "activity": 846947.2745305353,
+   "activityUnits": "t of steel",
+   "emissionsFactor": 0.09840000000000003,
+   "emissionsFactorUnits": "t of CO2e_100yr per t of steel",
+   "capacity": 1400000,
+   "capacityUnits": "t of steel"
+  },
+  {
+   "id": 1567082,
+   "name": "Yesilyurt Iron and Steel Tekkekoy plant",
+   "sector": "iron-and-steel",
+   "assetType": "EAF",
+   "owners": [
+    "Yesilyurt Demir Celik Endustri Ve Liman Isletmeleri AŞ",
+    "Yesilyurt Demir Celik Endustri Ve Liman Isletmeleri AŞ"
+   ],
+   "emissionsT": 77386.78239853293,
+   "activity": 786451.0406354971,
+   "activityUnits": "t of steel",
+   "emissionsFactor": 0.09840000000000003,
+   "emissionsFactorUnits": "t of CO2e_100yr per t of steel",
+   "capacity": 1299999.9999999998,
+   "capacityUnits": "t of steel"
+  },
+  {
+   "id": 1567066,
+   "name": "Ekinciler Iron and Steel Iskenderun plant",
+   "sector": "iron-and-steel",
+   "assetType": "EAF",
+   "owners": [
+    "Ekinciler Demir ve Celik Sanayi AŞ"
+   ],
+   "emissionsT": 74410.36769089704,
+   "activity": 756202.923687978,
+   "activityUnits": "t of steel",
+   "emissionsFactor": 0.09840000000000002,
+   "emissionsFactorUnits": "t of CO2e_100yr per t of steel",
+   "capacity": 1249999.9999999998,
+   "capacityUnits": "t of steel"
+  },
+  {
+   "id": 1567083,
+   "name": "Tosyali Toprakkale steel plant",
+   "sector": "iron-and-steel",
+   "assetType": "EAF",
+   "owners": [
+    "Tosyalı Holding AŞ",
+    "Tosyalı Holding AŞ"
+   ],
+   "emissionsT": 61934.73304703642,
+   "activity": 629418.0187706952,
+   "activityUnits": "t of steel",
+   "emissionsFactor": 0.09840000000000002,
+   "emissionsFactorUnits": "t of CO2e_100yr per t of steel",
+   "capacity": 994535.519125683,
+   "capacityUnits": "t of steel"
+  },
+  {
+   "id": 1567081,
+   "name": "Yazici Iron and Steel Iskenderun plant",
+   "sector": "iron-and-steel",
+   "assetType": "EAF",
+   "owners": [
+    "Yazici Demir Celik Sanayi ve Turizm Ticaret AŞ"
+   ],
+   "emissionsT": 56660.77266609283,
+   "activity": 635210.4558979014,
+   "activityUnits": "t of steel",
+   "emissionsFactor": 0.08920000000000003,
+   "emissionsFactorUnits": "t of CO2e_100yr per t of steel",
+   "capacity": 1049999.9999999998,
+   "capacityUnits": "t of steel"
+  },
+  {
+   "id": 1567084,
+   "name": "Asil Celik Orhangazi steel plant",
+   "sector": "iron-and-steel",
+   "assetType": "EAF",
+   "owners": [
+    "Asil Celik Sanayi ve Ticaret AŞ",
+    "Asil Celik Sanayi ve Ticaret AŞ",
+    "Asil Celik Sanayi ve Ticaret AŞ",
+    "Asil Celik Sanayi ve Ticaret AŞ",
+    "Asil Celik Sanayi ve Ticaret AŞ"
+   ],
+   "emissionsT": 35329.80059470234,
+   "activity": 441622.50743377913,
+   "activityUnits": "t of steel",
+   "emissionsFactor": 0.08000000000000003,
+   "emissionsFactorUnits": "t of CO2e_100yr per t of steel",
+   "capacity": 730000,
+   "capacityUnits": "t of steel"
+  },
+  {
+   "id": 1567079,
+   "name": "Siddik Kardesler Dilovasi steel plant",
+   "sector": "iron-and-steel",
+   "assetType": "EAF",
+   "owners": [
+    "Sıddık Kardeşler Haddecilik Sanayi Ticaret LŞ"
+   ],
+   "emissionsT": 33393.92111006109,
+   "activity": 417424.01387576386,
+   "activityUnits": "t of steel",
+   "emissionsFactor": 0.07999999999999996,
+   "emissionsFactorUnits": "t of CO2e_100yr per t of steel",
+   "capacity": 690000,
+   "capacityUnits": "t of steel"
+  },
+  {
+   "id": 55793501,
+   "name": "Vertra Celik Sarımazı steel plant",
+   "sector": "iron-and-steel",
+   "assetType": "EAF",
+   "owners": [],
+   "emissionsT": 0,
+   "activity": 0,
+   "activityUnits": "t of steel",
+   "emissionsFactor": null,
+   "emissionsFactorUnits": "t of CO2e_100yr per t of steel",
+   "capacity": 0,
+   "capacityUnits": "t of steel"
+  },
+  {
+   "id": 1897886,
+   "name": "Medcem Madencilik ve Yapı Malzemeleri Sanayi Ve Ticaret Silifke Cement Plant",
+   "sector": "cement",
+   "assetType": "integrated dry",
+   "owners": [
+    "Medcem Madencilik ve Yapı Malzemeleri Sanayi Ve Ticaret AŞ"
+   ],
+   "emissionsT": 3855477.2329806574,
+   "activity": 4907372.536091972,
+   "activityUnits": "t of cement",
+   "emissionsFactor": 0.7856499999999998,
+   "emissionsFactorUnits": "t of CO2e_100yr per t of cement",
+   "capacity": 7999999.999999999,
+   "capacityUnits": "t of cement"
+  },
+  {
+   "id": 1897871,
+   "name": "AkçanÇimento Sanayi ve Ticaret Ezine Cement Plant",
+   "sector": "cement",
+   "assetType": "integrated dry",
+   "owners": [
+    "Akçansa Çimento Sanayi ve Ticaret AŞ",
+    "Akçansa Çimento Sanayi ve Ticaret AŞ",
+    "Akçansa Çimento Sanayi ve Ticaret AŞ",
+    "Akçansa Çimento Sanayi ve Ticaret AŞ"
+   ],
+   "emissionsT": 2782173.182732314,
+   "activity": 3541237.424721331,
+   "activityUnits": "t of cement",
+   "emissionsFactor": 0.7856500000000001,
+   "emissionsFactorUnits": "t of CO2e_100yr per t of cement",
+   "capacity": 5500000,
+   "capacityUnits": "t of cement"
+  },
+  {
+   "id": 1897887,
+   "name": "Nuh Çimento Sanayi Körfez Cement Plant",
+   "sector": "cement",
+   "assetType": "integrated dry",
+   "owners": [
+    "Nuh Çimento Sanayi AŞ",
+    "Nuh Çimento Sanayi AŞ",
+    "Nuh Çimento Sanayi AŞ",
+    "Nuh Çimento Sanayi AŞ"
+   ],
+   "emissionsT": 2732064.7386757676,
+   "activity": 3477457.82304559,
+   "activityUnits": "t of cement",
+   "emissionsFactor": 0.78565,
+   "emissionsFactorUnits": "t of CO2e_100yr per t of cement",
+   "capacity": 5700000,
+   "capacityUnits": "t of cement"
+  },
+  {
+   "id": 1897868,
+   "name": "Goltas Goller Bolgesi Cimento Sanayi ve Ticaret Gönen Cement Plant",
+   "sector": "cement",
+   "assetType": "integrated dry",
+   "owners": [
+    "Goltas Goller Bolgesi Cimento Sanayi ve Ticaret AŞ",
+    "Goltas Goller Bolgesi Cimento Sanayi ve Ticaret AŞ",
+    "Goltas Goller Bolgesi Cimento Sanayi ve Ticaret AŞ"
+   ],
+   "emissionsT": 2435543.1576427687,
+   "activity": 3100035.839932245,
+   "activityUnits": "t of cement",
+   "emissionsFactor": 0.7856500000000001,
+   "emissionsFactorUnits": "t of CO2e_100yr per t of cement",
+   "capacity": 4999999.999999999,
+   "capacityUnits": "t of cement"
+  },
+  {
+   "id": 32439214,
+   "name": "Cimko Cimento ve Beton Sanayi ve Ticaret Pazarcık Cement Plant",
+   "sector": "cement",
+   "assetType": "integrated dry",
+   "owners": [
+    "Cimko Cimento ve Beton Sanayi ve Ticaret AŞ",
+    "Cimko Cimento ve Beton Sanayi ve Ticaret AŞ"
+   ],
+   "emissionsT": 2060945.172416004,
+   "activity": 3061984.433259301,
+   "activityUnits": "t of cement",
+   "emissionsFactor": 0.673075,
+   "emissionsFactorUnits": "t of CO2e_100yr per t of cement",
+   "capacity": 4699999.999999999,
+   "capacityUnits": "t of cement"
+  },
+  {
+   "id": 1897849,
+   "name": "AS Çimento Korkuteli Cement Plant",
+   "sector": "cement",
+   "assetType": "integrated dry",
+   "owners": [
+    "AS Çimento AŞ",
+    "AS Çimento AŞ"
+   ],
+   "emissionsT": 2041341.0374286254,
+   "activity": 2598282.998063546,
+   "activityUnits": "t of cement",
+   "emissionsFactor": 0.7856500000000002,
+   "emissionsFactorUnits": "t of CO2e_100yr per t of cement",
+   "capacity": 4300000.000000001,
+   "capacityUnits": "t of cement"
+  },
+  {
+   "id": 32439194,
+   "name": "Kahramanmaraş Çimento Sanayi Pazarcık Cement Plant",
+   "sector": "cement",
+   "assetType": "integrated dry",
+   "owners": [
+    "Kahramanmaraş Çimento Sanayi AŞ",
+    "Kahramanmaraş Çimento Sanayi AŞ"
+   ],
+   "emissionsT": 1758938.6057303674,
+   "activity": 2589530.520029986,
+   "activityUnits": "t of cement",
+   "emissionsFactor": 0.6792499999999998,
+   "emissionsFactorUnits": "t of CO2e_100yr per t of cement",
+   "capacity": 4000000,
+   "capacityUnits": "t of cement"
+  },
+  {
+   "id": 1897890,
+   "name": "Bolu Çimento Sanayii Bolu Merkez Cement Plant",
+   "sector": "cement",
+   "assetType": "integrated dry",
+   "owners": [
+    "Bolu Çimento Sanayii AŞ",
+    "Bolu Çimento Sanayii AŞ"
+   ],
+   "emissionsT": 1757690.6480594974,
+   "activity": 2213939.2483619223,
+   "activityUnits": "t of cement",
+   "emissionsFactor": 0.79392,
+   "emissionsFactorUnits": "t of CO2e_100yr per t of cement",
+   "capacity": 3500000,
+   "capacityUnits": "t of cement"
+  },
+  {
+   "id": 32439211,
+   "name": "SYCS Insaat ve Cimento Baskil Cement Plant",
+   "sector": "cement",
+   "assetType": "integrated dry",
+   "owners": [
+    "SYCS Insaat ve Cimento AŞ"
+   ],
+   "emissionsT": 1523094.4312166055,
+   "activity": 1938642.4377478594,
+   "activityUnits": "t of cement",
+   "emissionsFactor": 0.7856499999999998,
+   "emissionsFactorUnits": "t of CO2e_100yr per t of cement",
+   "capacity": 2999999.9999999995,
+   "capacityUnits": "t of cement"
+  },
+  {
+   "id": 32439209,
+   "name": "Mardin Cimento Artuklu Cement Plant",
+   "sector": "cement",
+   "assetType": "integrated dry",
+   "owners": [
+    "Mardin Cimento AŞ"
+   ],
+   "emissionsT": 1366148.4122190983,
+   "activity": 1738876.6145473155,
+   "activityUnits": "t of cement",
+   "emissionsFactor": 0.78565,
+   "emissionsFactorUnits": "t of CO2e_100yr per t of cement",
+   "capacity": 2700000,
+   "capacityUnits": "t of cement"
+  },
+  {
+   "id": 1897888,
+   "name": "Adana Cimento Sanayii Yüreğir Cement Plant",
+   "sector": "cement",
+   "assetType": "integrated dry",
+   "owners": [
+    "Adana Cimento Sanayii AŞ"
+   ],
+   "emissionsT": 1364982.834508632,
+   "activity": 2089270.1001157644,
+   "activityUnits": "t of cement",
+   "emissionsFactor": 0.6533299999999999,
+   "emissionsFactorUnits": "t of CO2e_100yr per t of cement",
+   "capacity": 3499999.9999999995,
+   "capacityUnits": "t of cement"
+  },
+  {
+   "id": 42547292,
+   "name": "Marmara Cimento YD Madencilik Hoşafoğlu Cement Plant",
+   "sector": "cement",
+   "assetType": "integrated dry",
+   "owners": [
+    "Marmara Cimento YD Madencilik AŞ"
+   ],
+   "emissionsT": 1359931.27470385,
+   "activity": 1730963.2466159868,
+   "activityUnits": "t of cement",
+   "emissionsFactor": 0.78565,
+   "emissionsFactorUnits": "t of CO2e_100yr per t of cement",
+   "capacity": 2700000,
+   "capacityUnits": "t of cement"
+  },
+  {
+   "id": 1897858,
+   "name": "BurCimento Fabrikasi Kestel Cement Plant",
+   "sector": "cement",
+   "assetType": "integrated dry",
+   "owners": [
+    "Bursa Cimento Fabrikasi AŞ",
+    "Bursa Cimento Fabrikasi AŞ",
+    "Bursa Cimento Fabrikasi AŞ",
+    "Bursa Cimento Fabrikasi AŞ"
+   ],
+   "emissionsT": 1312954.8746917532,
+   "activity": 1824841.0328034481,
+   "activityUnits": "t of cement",
+   "emissionsFactor": 0.7194900000000002,
+   "emissionsFactorUnits": "t of CO2e_100yr per t of cement",
+   "capacity": 2899999.999999999,
+   "capacityUnits": "t of cement"
+  },
+  {
+   "id": 32439207,
+   "name": "Bolu Çimento Sanayii Kahramankazan Cement Plant",
+   "sector": "cement",
+   "assetType": "integrated dry",
+   "owners": [
+    "Bolu Çimento Sanayii AŞ",
+    "Bolu Çimento Sanayii AŞ"
+   ],
+   "emissionsT": 1301959.8901943942,
+   "activity": 1639913.2030864498,
+   "activityUnits": "t of cement",
+   "emissionsFactor": 0.79392,
+   "emissionsFactorUnits": "t of CO2e_100yr per t of cement",
+   "capacity": 2599999.9999999995,
+   "capacityUnits": "t of cement"
+  },
+  {
+   "id": 1897907,
+   "name": "Bastas Baskent Cimento Sanayi ve Ticaret Elmadağ Cement Plant",
+   "sector": "cement",
+   "assetType": "integrated dry",
+   "owners": [
+    "Bastas Baskent Cimento Sanayi ve Ticaret AŞ",
+    "Bastas Baskent Cimento Sanayi ve Ticaret AŞ",
+    "Bastas Baskent Cimento Sanayi ve Ticaret AŞ",
+    "Bastas Baskent Cimento Sanayi ve Ticaret AŞ"
+   ],
+   "emissionsT": 1281002.6770456773,
+   "activity": 1630500.448094797,
+   "activityUnits": "t of cement",
+   "emissionsFactor": 0.78565,
+   "emissionsFactorUnits": "t of CO2e_100yr per t of cement",
+   "capacity": 2599999.9999999995,
+   "capacityUnits": "t of cement"
+  },
+  {
+   "id": 1897865,
+   "name": "ÇimÇimento Sanayi ve Ticaret Akdeniz Cement Plant",
+   "sector": "cement",
+   "assetType": "integrated dry",
+   "owners": [
+    "Çimsa Çimento Sanayi ve Ticaret AŞ",
+    "Çimsa Çimento Sanayi ve Ticaret AŞ",
+    "Çimsa Çimento Sanayi ve Ticaret AŞ",
+    "Çimsa Çimento Sanayi ve Ticaret AŞ"
+   ],
+   "emissionsT": 1245005.9977666005,
+   "activity": 1813819.9268161426,
+   "activityUnits": "t of cement",
+   "emissionsFactor": 0.6864000000000001,
+   "emissionsFactorUnits": "t of CO2e_100yr per t of cement",
+   "capacity": 2999999.9999999995,
+   "capacityUnits": "t of cement"
+  },
+  {
+   "id": 32439212,
+   "name": "Cimko Cimento ve Beton Sanayi ve Ticaret Bartın Merkez Cement Plant",
+   "sector": "cement",
+   "assetType": "integrated dry",
+   "owners": [
+    "Cimko Cimento ve Beton Sanayi ve Ticaret AŞ",
+    "Cimko Cimento ve Beton Sanayi ve Ticaret AŞ"
+   ],
+   "emissionsT": 1213739.8578291386,
+   "activity": 1544886.2188368086,
+   "activityUnits": "t of cement",
+   "emissionsFactor": 0.78565,
+   "emissionsFactorUnits": "t of CO2e_100yr per t of cement",
+   "capacity": 2499999.9999999995,
+   "capacityUnits": "t of cement"
+  },
+  {
+   "id": 32439220,
+   "name": "Konya Çimento Sanayi Selçuklu Cement Plant",
+   "sector": "cement",
+   "assetType": "integrated dry",
+   "owners": [
+    "Konya Çimento Sanayi AŞ",
+    "Konya Çimento Sanayi AŞ",
+    "Konya Çimento Sanayi AŞ",
+    "Konya Çimento Sanayi AŞ"
+   ],
+   "emissionsT": 1197485.5800901675,
+   "activity": 1762952.6390727535,
+   "activityUnits": "t of cement",
+   "emissionsFactor": 0.6792499999999998,
+   "emissionsFactorUnits": "t of CO2e_100yr per t of cement",
+   "capacity": 2999999.9999999995,
+   "capacityUnits": "t of cement"
+  },
+  {
+   "id": 32439178,
+   "name": "Batisoke Soke Cimento Sanayii Söke Cement Plant",
+   "sector": "cement",
+   "assetType": "integrated dry",
+   "owners": [
+    "Batisoke Soke Cimento Sanayii AŞ",
+    "Batisoke Soke Cimento Sanayii AŞ",
+    "Batisoke Soke Cimento Sanayii AŞ",
+    "Batisoke Soke Cimento Sanayii AŞ"
+   ],
+   "emissionsT": 1114412.207328789,
+   "activity": 1791515.484814386,
+   "activityUnits": "t of cement",
+   "emissionsFactor": 0.62205,
+   "emissionsFactorUnits": "t of CO2e_100yr per t of cement",
+   "capacity": 2999999.9999999995,
+   "capacityUnits": "t of cement"
+  },
+  {
+   "id": 32439191,
+   "name": "AkçanÇimento Sanayi ve Ticaret Büyükçekmece Cement Plant",
+   "sector": "cement",
+   "assetType": "integrated dry",
+   "owners": [
+    "Akçansa Çimento Sanayi ve Ticaret AŞ",
+    "Akçansa Çimento Sanayi ve Ticaret AŞ",
+    "Akçansa Çimento Sanayi ve Ticaret AŞ",
+    "Akçansa Çimento Sanayi ve Ticaret AŞ"
+   ],
+   "emissionsT": 1077944.6079750638,
+   "activity": 1601522.2790551782,
+   "activityUnits": "t of cement",
+   "emissionsFactor": 0.6730749999999999,
+   "emissionsFactorUnits": "t of CO2e_100yr per t of cement",
+   "capacity": 2499999.9999999995,
+   "capacityUnits": "t of cement"
+  },
+  {
+   "id": 1897892,
+   "name": "OYAK Çimento Fabrikaları Belevi Cement Plant",
+   "sector": "cement",
+   "assetType": "integrated dry",
+   "owners": [
+    "OYAK Çimento Fabrikaları AŞ",
+    "OYAK Çimento Fabrikaları AŞ",
+    "OYAK Çimento Fabrikaları AŞ",
+    "OYAK Çimento Fabrikaları AŞ",
+    "OYAK Çimento Fabrikaları AŞ",
+    "OYAK Çimento Fabrikaları AŞ"
+   ],
+   "emissionsT": 1043336.0926593372,
+   "activity": 1677254.3889708815,
+   "activityUnits": "t of cement",
+   "emissionsFactor": 0.6220500000000002,
+   "emissionsFactorUnits": "t of CO2e_100yr per t of cement",
+   "capacity": 2999999.9999999995,
+   "capacityUnits": "t of cement"
+  },
+  {
+   "id": 1897889,
+   "name": "Aslan Cimento Darıca Cement Plant",
+   "sector": "cement",
+   "assetType": "integrated dry",
+   "owners": [
+    "Aslan Cimento AŞ"
+   ],
+   "emissionsT": 1031649.7907326,
+   "activity": 2003981.7224797981,
+   "activityUnits": "t of cement",
+   "emissionsFactor": 0.5147999999999999,
+   "emissionsFactorUnits": "t of CO2e_100yr per t of cement",
+   "capacity": 3300000,
+   "capacityUnits": "t of cement"
+  },
+  {
+   "id": 32439183,
+   "name": "Çimentas Izmir Çimento Fabrikasi Türk Bornova Cement Plant",
+   "sector": "cement",
+   "assetType": "integrated dry",
+   "owners": [
+    "Çimentas Izmir Çimento Fabrikasi Türk AŞ",
+    "Çimentas Izmir Çimento Fabrikasi Türk AŞ",
+    "Çimentas Izmir Çimento Fabrikasi Türk AŞ"
+   ],
+   "emissionsT": 1003661.5840952698,
+   "activity": 1477602.6265664627,
+   "activityUnits": "t of cement",
+   "emissionsFactor": 0.67925,
+   "emissionsFactorUnits": "t of CO2e_100yr per t of cement",
+   "capacity": 2300000,
+   "capacityUnits": "t of cement"
+  },
+  {
+   "id": 32439224,
+   "name": "Yurt Cimento Sanayi ve Ticaret Erkan Cement Plant",
+   "sector": "cement",
+   "assetType": "integrated dry",
+   "owners": [
+    "Yurt Cimento Sanayi ve Ticaret AŞ"
+   ],
+   "emissionsT": 996555.6132037367,
+   "activity": 1268447.2897648276,
+   "activityUnits": "t of cement",
+   "emissionsFactor": 0.78565,
+   "emissionsFactorUnits": "t of CO2e_100yr per t of cement",
+   "capacity": 1980000,
+   "capacityUnits": "t of cement"
+  },
+  {
+   "id": 1897906,
+   "name": "Titan Group Evrencik Cement Plant",
+   "sector": "cement",
+   "assetType": "integrated dry",
+   "owners": [
+    "Traçim Cimento Sanayi Ve Ticaret AŞ"
+   ],
+   "emissionsT": 985841.787577467,
+   "activity": 1451368.10832163,
+   "activityUnits": "t of cement",
+   "emissionsFactor": 0.6792499999999999,
+   "emissionsFactorUnits": "t of CO2e_100yr per t of cement",
+   "capacity": 2500000,
+   "capacityUnits": "t of cement"
+  },
+  {
+   "id": 1897902,
+   "name": "Soma Çimento Madencilik Beton Sanayi ve Ticaret Soma Cement Plant",
+   "sector": "cement",
+   "assetType": "integrated dry",
+   "owners": [
+    "Soma Çimento Madencilik Beton Sanayi ve Ticaret AŞ"
+   ],
+   "emissionsT": 965688.8557793777,
+   "activity": 1244203.8984466635,
+   "activityUnits": "t of cement",
+   "emissionsFactor": 0.7761499999999999,
+   "emissionsFactorUnits": "t of CO2e_100yr per t of cement",
+   "capacity": 1999999.9999999998,
+   "capacityUnits": "t of cement"
+  },
+  {
+   "id": 32439210,
+   "name": "Unye Cimento Sanayi ve Ticaret Ünye Cement Plant",
+   "sector": "cement",
+   "assetType": "integrated dry",
+   "owners": [
+    "Unye Cimento Sanayi ve Ticaret AŞ"
+   ],
+   "emissionsT": 963428.3864537437,
+   "activity": 1548795.734191373,
+   "activityUnits": "t of cement",
+   "emissionsFactor": 0.6220500000000001,
+   "emissionsFactorUnits": "t of CO2e_100yr per t of cement",
+   "capacity": 2800000,
+   "capacityUnits": "t of cement"
+  },
+  {
+   "id": 42547261,
+   "name": "Vezirhan Cimento Madencilik Sanayi Ve Ticaret Bilecik Cement Plant",
+   "sector": "cement",
+   "assetType": "integrated dry",
+   "owners": [
+    "Vezirhan Cimento Madencilik Sanayi Ve Ticaret AŞ"
+   ],
+   "emissionsT": 962012.9212934148,
+   "activity": 1224480.2663952329,
+   "activityUnits": "t of cement",
+   "emissionsFactor": 0.7856500000000001,
+   "emissionsFactorUnits": "t of CO2e_100yr per t of cement",
+   "capacity": 2000000,
+   "capacityUnits": "t of cement"
+  },
+  {
+   "id": 32439186,
+   "name": "ÇimÇimento Sanayi ve Ticaret Tepebaşı Cement Plant",
+   "sector": "cement",
+   "assetType": "integrated dry",
+   "owners": [
+    "Çimsa Çimento Sanayi ve Ticaret AŞ",
+    "Çimsa Çimento Sanayi ve Ticaret AŞ",
+    "Çimsa Çimento Sanayi ve Ticaret AŞ",
+    "Çimsa Çimento Sanayi ve Ticaret AŞ"
+   ],
+   "emissionsT": 954339.1330629139,
+   "activity": 1404989.5223598287,
+   "activityUnits": "t of cement",
+   "emissionsFactor": 0.6792500000000001,
+   "emissionsFactorUnits": "t of CO2e_100yr per t of cement",
+   "capacity": 2199999.9999999995,
+   "capacityUnits": "t of cement"
+  },
+  {
+   "id": 1897862,
+   "name": "Çimentas Izmir Çimento Fabrikasi Türk Lalapaşa Cement Plant",
+   "sector": "cement",
+   "assetType": "integrated dry",
+   "owners": [
+    "Çimentas Izmir Çimento Fabrikasi Türk AŞ",
+    "Çimentas Izmir Çimento Fabrikasi Türk AŞ",
+    "Çimentas Izmir Çimento Fabrikasi Türk AŞ"
+   ],
+   "emissionsT": 914908.6674186594,
+   "activity": 1164524.492354941,
+   "activityUnits": "t of cement",
+   "emissionsFactor": 0.78565,
+   "emissionsFactorUnits": "t of CO2e_100yr per t of cement",
+   "capacity": 2099999.9999999995,
+   "capacityUnits": "t of cement"
+  },
+  {
+   "id": 32439216,
+   "name": "Sonmez Cimento ve Madencilik Insaat Sanayi Ticaret Sarımazı Cement Plant",
+   "sector": "cement",
+   "assetType": "integrated dry",
+   "owners": [
+    "Sonmez Cimento ve Madencilik Insaat Sanayi Ticaret AŞ",
+    "Sonmez Cimento ve Madencilik Insaat Sanayi Ticaret AŞ",
+    "Sonmez Cimento ve Madencilik Insaat Sanayi Ticaret AŞ",
+    "Sonmez Cimento ve Madencilik Insaat Sanayi Ticaret AŞ"
+   ],
+   "emissionsT": 912365.8075247497,
+   "activity": 1343195.8888844308,
+   "activityUnits": "t of cement",
+   "emissionsFactor": 0.67925,
+   "emissionsFactorUnits": "t of CO2e_100yr per t of cement",
+   "capacity": 2160000,
+   "capacityUnits": "t of cement"
+  },
+  {
+   "id": 32439174,
+   "name": "Askale Cimento Sanayi Gümüşhane Merkez Cement Plant",
+   "sector": "cement",
+   "assetType": "integrated dry",
+   "owners": [
+    "Askale Cimento Sanayi AŞ"
+   ],
+   "emissionsT": 882626.4804382856,
+   "activity": 1123434.7106705091,
+   "activityUnits": "t of cement",
+   "emissionsFactor": 0.7856500000000001,
+   "emissionsFactorUnits": "t of CO2e_100yr per t of cement",
+   "capacity": 1800000,
+   "capacityUnits": "t of cement"
+  },
+  {
+   "id": 32439195,
+   "name": "Limak Cimento Sanayi ve Ticaret Altıeylül Cement Plant",
+   "sector": "cement",
+   "assetType": "integrated dry",
+   "owners": [
+    "Limak Cimento Sanayi ve Ticaret AŞ"
+   ],
+   "emissionsT": 872399.0901052427,
+   "activity": 1485769.181166004,
+   "activityUnits": "t of cement",
+   "emissionsFactor": 0.5871700000000001,
+   "emissionsFactorUnits": "t of CO2e_100yr per t of cement",
+   "capacity": 2300000,
+   "capacityUnits": "t of cement"
+  },
+  {
+   "id": 32439179,
+   "name": "Batıçim Batı Anadolu Çimento Sanayii Bornova Cement Plant",
+   "sector": "cement",
+   "assetType": "integrated dry",
+   "owners": [
+    "Batıçim Batı Anadolu Çimento Sanayii AŞ",
+    "Batıçim Batı Anadolu Çimento Sanayii AŞ",
+    "Batıçim Batı Anadolu Çimento Sanayii AŞ",
+    "Batıçim Batı Anadolu Çimento Sanayii AŞ"
+   ],
+   "emissionsT": 869700.397982785,
+   "activity": 1280383.3610346485,
+   "activityUnits": "t of cement",
+   "emissionsFactor": 0.67925,
+   "emissionsFactorUnits": "t of CO2e_100yr per t of cement",
+   "capacity": 1999999.9999999998,
+   "capacityUnits": "t of cement"
+  },
+  {
+   "id": 1897904,
+   "name": "Adocim Cimento Beton Sanayi ve Ticaret Artova Cement Plant",
+   "sector": "cement",
+   "assetType": "integrated dry",
+   "owners": [
+    "Adocim Cimento Beton Sanayi ve Ticaret AŞ",
+    "Adocim Cimento Beton Sanayi ve Ticaret AŞ",
+    "Adocim Cimento Beton Sanayi ve Ticaret AŞ",
+    "Adocim Cimento Beton Sanayi ve Ticaret AŞ"
+   ],
+   "emissionsT": 846435.3256044432,
+   "activity": 1077369.471907902,
+   "activityUnits": "t of cement",
+   "emissionsFactor": 0.78565,
+   "emissionsFactorUnits": "t of CO2e_100yr per t of cement",
+   "capacity": 1800000,
+   "capacityUnits": "t of cement"
+  },
+  {
+   "id": 1897899,
+   "name": "Cimko Cimento ve Beton Sanayi ve Ticaret Adıyaman Merkez Cement Plant",
+   "sector": "cement",
+   "assetType": "integrated dry",
+   "owners": [
+    "Cimko Cimento ve Beton Sanayi ve Ticaret AŞ",
+    "Cimko Cimento ve Beton Sanayi ve Ticaret AŞ"
+   ],
+   "emissionsT": 831678.374258036,
+   "activity": 996282.1122856459,
+   "activityUnits": "t of cement",
+   "emissionsFactor": 0.8347819999999999,
+   "emissionsFactorUnits": "t of CO2e_100yr per t of cement",
+   "capacity": 1600000.0000000002,
+   "capacityUnits": "t of cement"
+  },
+  {
+   "id": 42547024,
+   "name": "Limak Cimento Sanayi ve Ticaret Kilis Merkez Cement Plant",
+   "sector": "cement",
+   "assetType": "integrated dry",
+   "owners": [
+    "Limak Cimento Sanayi ve Ticaret AŞ"
+   ],
+   "emissionsT": 804516.6893781575,
+   "activity": 1370159.7312161,
+   "activityUnits": "t of cement",
+   "emissionsFactor": 0.58717,
+   "emissionsFactorUnits": "t of CO2e_100yr per t of cement",
+   "capacity": 2259999.9999999995,
+   "capacityUnits": "t of cement"
+  },
+  {
+   "id": 32439201,
+   "name": "Limak Cimento Sanayi ve Ticaret Karaköprü Cement Plant",
+   "sector": "cement",
+   "assetType": "integrated dry",
+   "owners": [
+    "Limak Cimento Sanayi ve Ticaret AŞ"
+   ],
+   "emissionsT": 803256.1357006369,
+   "activity": 1368012.9020567073,
+   "activityUnits": "t of cement",
+   "emissionsFactor": 0.5871700000000001,
+   "emissionsFactorUnits": "t of CO2e_100yr per t of cement",
+   "capacity": 2149999.9999999995,
+   "capacityUnits": "t of cement"
+  },
+  {
+   "id": 1897911,
+   "name": "Votorantim Çimento Sanayi Ve Ticaret Sivas Merkez Cement Plant",
+   "sector": "cement",
+   "assetType": "integrated dry",
+   "owners": [
+    "Votorantim Çimento Sanayi Ve Ticaret AŞ",
+    "Votorantim Çimento Sanayi Ve Ticaret AŞ"
+   ],
+   "emissionsT": 801743.2272868123,
+   "activity": 1020483.9652349167,
+   "activityUnits": "t of cement",
+   "emissionsFactor": 0.78565,
+   "emissionsFactorUnits": "t of CO2e_100yr per t of cement",
+   "capacity": 1800000,
+   "capacityUnits": "t of cement"
+  },
+  {
+   "id": 1897878,
+   "name": "Limak Cimento Sanayi ve Ticaret Pınarhisar Cement Plant",
+   "sector": "cement",
+   "assetType": "integrated dry",
+   "owners": [
+    "Limak Cimento Sanayi ve Ticaret AŞ"
+   ],
+   "emissionsT": 730987.6889601934,
+   "activity": 1346068.1423213773,
+   "activityUnits": "t of cement",
+   "emissionsFactor": 0.5430540000000001,
+   "emissionsFactorUnits": "t of CO2e_100yr per t of cement",
+   "capacity": 2340000,
+   "capacityUnits": "t of cement"
+  },
+  {
+   "id": 1897873,
+   "name": "Askale Cimento Sanayi Kavak Cement Plant",
+   "sector": "cement",
+   "assetType": "integrated dry",
+   "owners": [
+    "Askale Cimento Sanayi AŞ"
+   ],
+   "emissionsT": 706275.5480938344,
+   "activity": 898969.7041861318,
+   "activityUnits": "t of cement",
+   "emissionsFactor": 0.78565,
+   "emissionsFactorUnits": "t of CO2e_100yr per t of cement",
+   "capacity": 1499999.9999999998,
+   "capacityUnits": "t of cement"
+  },
+  {
+   "id": 32439176,
+   "name": "Askale Cimento Sanayi Aşkale Cement Plant",
+   "sector": "cement",
+   "assetType": "integrated dry",
+   "owners": [
+    "Askale Cimento Sanayi AŞ"
+   ],
+   "emissionsT": 677107.048328841,
+   "activity": 861843.1214011849,
+   "activityUnits": "t of cement",
+   "emissionsFactor": 0.7856500000000001,
+   "emissionsFactorUnits": "t of CO2e_100yr per t of cement",
+   "capacity": 1500000,
+   "capacityUnits": "t of cement"
+  },
+  {
+   "id": 32439222,
+   "name": "Yibitas Yozgat Isci Birligi Insaat Malzemeleri Ticaret Sanayi Saray Cement Plant",
+   "sector": "cement",
+   "assetType": "integrated dry",
+   "owners": [
+    "Yibitas Yozgat Isci Birligi Insaat Malzemeleri Ticaret Sanayi AŞ",
+    "Yibitas Yozgat Isci Birligi Insaat Malzemeleri Ticaret Sanayi AŞ",
+    "Yibitas Yozgat Isci Birligi Insaat Malzemeleri Ticaret Sanayi AŞ"
+   ],
+   "emissionsT": 631677.0621467779,
+   "activity": 929962.5500872694,
+   "activityUnits": "t of cement",
+   "emissionsFactor": 0.6792500000000001,
+   "emissionsFactorUnits": "t of CO2e_100yr per t of cement",
+   "capacity": 1660000,
+   "capacityUnits": "t of cement"
+  },
+  {
+   "id": 1897852,
+   "name": "Safi Çimento Üretim San Tic Taşçılar Cement Plant",
+   "sector": "cement",
+   "assetType": "integrated dry",
+   "owners": [
+    "Safi Çimento Üretim San. Tic. AŞ"
+   ],
+   "emissionsT": 555447.4285180953,
+   "activity": 850178.9731347028,
+   "activityUnits": "t of cement",
+   "emissionsFactor": 0.65333,
+   "emissionsFactorUnits": "t of CO2e_100yr per t of cement",
+   "capacity": 1499999.9999999998,
+   "capacityUnits": "t of cement"
+  },
+  {
+   "id": 32439173,
+   "name": "Arkoz Madencilik Enerji Sanayi Ve Ticaret Doğubayazıt Cement Plant",
+   "sector": "cement",
+   "assetType": "integrated dry",
+   "owners": [
+    "Arkoz Madencilik Enerji Sanayi Ve Ticaret AŞ"
+   ],
+   "emissionsT": 541240.5715240564,
+   "activity": 752255.863909236,
+   "activityUnits": "t of cement",
+   "emissionsFactor": 0.7194900000000002,
+   "emissionsFactorUnits": "t of CO2e_100yr per t of cement",
+   "capacity": 1299999.9999999998,
+   "capacityUnits": "t of cement"
+  },
+  {
+   "id": 32439182,
+   "name": "Çimentas Izmir Çimento Fabrikasi Türk Baskil Cement Plant",
+   "sector": "cement",
+   "assetType": "integrated dry",
+   "owners": [
+    "Çimentas Izmir Çimento Fabrikasi Türk AŞ",
+    "Çimentas Izmir Çimento Fabrikasi Türk AŞ",
+    "Çimentas Izmir Çimento Fabrikasi Türk AŞ"
+   ],
+   "emissionsT": 523850.8614571753,
+   "activity": 666773.8324408773,
+   "activityUnits": "t of cement",
+   "emissionsFactor": 0.78565,
+   "emissionsFactorUnits": "t of CO2e_100yr per t of cement",
+   "capacity": 1052631.5789473685,
+   "capacityUnits": "t of cement"
+  },
+  {
+   "id": 1897863,
+   "name": "Ferçim Çimento Fabrikası Melikgazi Cement Plant",
+   "sector": "cement",
+   "assetType": "integrated dry",
+   "owners": [
+    "Ferçim Çimento Fabrikası AŞ"
+   ],
+   "emissionsT": 482865.86123285163,
+   "activity": 717402.7578395449,
+   "activityUnits": "t of cement",
+   "emissionsFactor": 0.6730749999999999,
+   "emissionsFactorUnits": "t of CO2e_100yr per t of cement",
+   "capacity": 1100000,
+   "capacityUnits": "t of cement"
+  },
+  {
+   "id": 1897869,
+   "name": "AkçanÇimento Sanayi ve Ticaret Ladik Cement Plant",
+   "sector": "cement",
+   "assetType": "integrated dry",
+   "owners": [
+    "Akçansa Çimento Sanayi ve Ticaret AŞ",
+    "Akçansa Çimento Sanayi ve Ticaret AŞ",
+    "Akçansa Çimento Sanayi ve Ticaret AŞ",
+    "Akçansa Çimento Sanayi ve Ticaret AŞ"
+   ],
+   "emissionsT": 479316.7467286919,
+   "activity": 610089.4122429733,
+   "activityUnits": "t of cement",
+   "emissionsFactor": 0.7856499999999998,
+   "emissionsFactorUnits": "t of CO2e_100yr per t of cement",
+   "capacity": 999999.9999999999,
+   "capacityUnits": "t of cement"
+  },
+  {
+   "id": 32439198,
+   "name": "Limak Cimento Sanayi ve Ticaret Ergani Cement Plant",
+   "sector": "cement",
+   "assetType": "integrated dry",
+   "owners": [
+    "Limak Cimento Sanayi ve Ticaret AŞ"
+   ],
+   "emissionsT": 463628.30204866023,
+   "activity": 789598.0755976298,
+   "activityUnits": "t of cement",
+   "emissionsFactor": 0.58717,
+   "emissionsFactorUnits": "t of CO2e_100yr per t of cement",
+   "capacity": 1400000,
+   "capacityUnits": "t of cement"
+  },
+  {
+   "id": 1897881,
+   "name": "Limak Cimento Sanayi ve Ticaret Kurtalan Cement Plant",
+   "sector": "cement",
+   "assetType": "integrated dry",
+   "owners": [
+    "Limak Cimento Sanayi ve Ticaret AŞ"
+   ],
+   "emissionsT": 450654.77142671903,
+   "activity": 756843.2947513082,
+   "activityUnits": "t of cement",
+   "emissionsFactor": 0.5954400000000001,
+   "emissionsFactorUnits": "t of CO2e_100yr per t of cement",
+   "capacity": 1199999.9999999998,
+   "capacityUnits": "t of cement"
+  },
+  {
+   "id": 42547357,
+   "name": "CimÇimento Sanayi ve Ticaret Halımoru Cement Plant",
+   "sector": "cement",
+   "assetType": "integrated dry",
+   "owners": [
+    "Çimsa Çimento Sanayi ve Ticaret AŞ",
+    "Çimsa Çimento Sanayi ve Ticaret AŞ",
+    "Çimsa Çimento Sanayi ve Ticaret AŞ",
+    "Çimsa Çimento Sanayi ve Ticaret AŞ"
+   ],
+   "emissionsT": 439628.8385926767,
+   "activity": 1271720.9299288294,
+   "activityUnits": "t of cement",
+   "emissionsFactor": 0.34569600000000006,
+   "emissionsFactorUnits": "t of CO2e_100yr per t of cement",
+   "capacity": 2099999.9999999995,
+   "capacityUnits": "t of cement"
+  },
+  {
+   "id": 1897909,
+   "name": "Votorantim Çimento Sanayi Ve Ticaret Elmadağ Cement Plant",
+   "sector": "cement",
+   "assetType": "integrated dry",
+   "owners": [
+    "Votorantim Çimento Sanayi Ve Ticaret AŞ",
+    "Votorantim Çimento Sanayi Ve Ticaret AŞ"
+   ],
+   "emissionsT": 426254.1743617003,
+   "activity": 627536.5099178511,
+   "activityUnits": "t of cement",
+   "emissionsFactor": 0.6792499999999999,
+   "emissionsFactorUnits": "t of CO2e_100yr per t of cement",
+   "capacity": 1000000,
+   "capacityUnits": "t of cement"
+  },
+  {
+   "id": 32439188,
+   "name": "Ferçim Çimento Fabrikası Niğde Merkez Cement Plant",
+   "sector": "cement",
+   "assetType": "integrated dry",
+   "owners": [
+    "Ferçim Çimento Fabrikası AŞ"
+   ],
+   "emissionsT": 391980.117383747,
+   "activity": 582372.1240333499,
+   "activityUnits": "t of cement",
+   "emissionsFactor": 0.673075,
+   "emissionsFactorUnits": "t of CO2e_100yr per t of cement",
+   "capacity": 1200000,
+   "capacityUnits": "t of cement"
+  },
+  {
+   "id": 1897859,
+   "name": "Kars Cimento Sanayi Ve Ticaret Bozkale Cement Plant",
+   "sector": "cement",
+   "assetType": "integrated dry",
+   "owners": [
+    "Kars Cimento Sanayi Ve Ticaret AŞ",
+    "Kars Cimento Sanayi Ve Ticaret AŞ",
+    "Kars Cimento Sanayi Ve Ticaret AŞ",
+    "Kars Cimento Sanayi Ve Ticaret AŞ"
+   ],
+   "emissionsT": 296451.1465075596,
+   "activity": 377332.3318367715,
+   "activityUnits": "t of cement",
+   "emissionsFactor": 0.7856500000000001,
+   "emissionsFactorUnits": "t of CO2e_100yr per t of cement",
+   "capacity": 600000,
+   "capacityUnits": "t of cement"
+  },
+  {
+   "id": 42547309,
+   "name": "Arkoz Madencilik Kars Cement Plant",
+   "sector": "cement",
+   "assetType": "integrated dry",
+   "owners": [
+    "Çimentas Izmir Çimento Fabrikasi Türk AŞ",
+    "Çimentas Izmir Çimento Fabrikasi Türk AŞ",
+    "Çimentas Izmir Çimento Fabrikasi Türk AŞ"
+   ],
+   "emissionsT": 285787.4317247599,
+   "activity": 363759.2206768407,
+   "activityUnits": "t of cement",
+   "emissionsFactor": 0.7856500000000001,
+   "emissionsFactorUnits": "t of CO2e_100yr per t of cement",
+   "capacity": 600000,
+   "capacityUnits": "t of cement"
+  },
+  {
+   "id": 1897854,
+   "name": "Askale Cimento Sanayi Edremit Cement Plant",
+   "sector": "cement",
+   "assetType": "integrated dry",
+   "owners": [
+    "Askale Cimento Sanayi AŞ"
+   ],
+   "emissionsT": 261986.77116249275,
+   "activity": 333464.9922516295,
+   "activityUnits": "t of cement",
+   "emissionsFactor": 0.7856500000000002,
+   "emissionsFactorUnits": "t of CO2e_100yr per t of cement",
+   "capacity": 600000,
+   "capacityUnits": "t of cement"
+  },
+  {
+   "id": 55296418,
+   "name": "Limak Cimento Sanayi ve Ticaret Polatlı Cement Plant",
+   "sector": "cement",
+   "assetType": "integrated dry",
+   "owners": [],
+   "emissionsT": 79587.56660734107,
+   "activity": 135544.33402139254,
+   "activityUnits": "t of cement",
+   "emissionsFactor": 0.5871700000000001,
+   "emissionsFactorUnits": "t of CO2e_100yr per t of cement",
+   "capacity": 1800000,
+   "capacityUnits": "t of cement"
+  },
+  {
+   "id": 54502850,
+   "name": "Eti Alüminyum Seydişehir Refinery",
+   "sector": "aluminum",
+   "assetType": "Refinery",
+   "owners": [
+    "Cengiz Holding AS"
+   ],
+   "emissionsT": 439011.297557208,
+   "activity": 183609.9111489787,
+   "activityUnits": "t of alumina/aluminum",
+   "emissionsFactor": 2.3909999999999996,
+   "emissionsFactorUnits": "t of CO2e_100yr per t of alumina/aluminum",
+   "capacity": 299999.99999999994,
+   "capacityUnits": "t of alumina/aluminum"
+  },
+  {
+   "id": 43765125,
+   "name": "Seydisehir Eti Aluminum Smelter",
+   "sector": "aluminum",
+   "assetType": "Smelting",
+   "owners": [],
+   "emissionsT": 72438.84815072527,
+   "activity": 48292.56543381684,
+   "activityUnits": "t of alumina/aluminum",
+   "emissionsFactor": 1.5000000000000002,
+   "emissionsFactorUnits": "t of CO2e_100yr per t of alumina/aluminum",
+   "capacity": 75000,
+   "capacityUnits": "t of alumina/aluminum"
+  },
+  {
+   "id": 54502823,
+   "name": "Cerkezkoy Aluminum Billet & Slab Plant",
+   "sector": "aluminum",
+   "assetType": "Smelting",
+   "owners": [],
+   "emissionsT": 9658.51308676337,
+   "activity": 6439.0087245089135,
+   "activityUnits": "t of alumina/aluminum",
+   "emissionsFactor": 1.5,
+   "emissionsFactorUnits": "t of CO2e_100yr per t of alumina/aluminum",
+   "capacity": 9999.999999999998,
+   "capacityUnits": "t of alumina/aluminum"
+  }
+ ]
+}

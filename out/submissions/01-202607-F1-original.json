@@ -1,0 +1,35 @@
+{
+ "tag": "01-202607-F1-original",
+ "facilityId": 1,
+ "facilityName": "Ege Green Steel - EAF rebar mill (fictional)",
+ "period": 202607,
+ "kind": "original",
+ "claim": {
+  "facilityId": 1,
+  "period": 202607,
+  "productionTonnes": 40147,
+  "directEmissionsKg": 4300497,
+  "indirectEmissionsKg": 7404603,
+  "shipmentsRoot": "0xba857d624cb31e76a01a84736a17ba50ffab77d04da6f8ca9e5274712679cf55",
+  "evidenceHash": "0x8d33e217856e54e41a7ab5770913c0cfd1bc3d5dbd1f22b5fc7d0855385179fa",
+  "nonce": 0
+ },
+ "claimDigest": "0x57533dbd7d89fca7bfd4fb614c8479ef9756349702496ddc7d94057218080f32",
+ "operatorSignature": "0x6de01bea76b0e705baf2e052b9924134aa6d36af97080e12c77c493d5f4f533e293fda1318ef81c4e9eca8c333f5eeb92f6139c39c2c65383add039831f0b0081b",
+ "verification": {
+  "claimDigest": "0x57533dbd7d89fca7bfd4fb614c8479ef9756349702496ddc7d94057218080f32",
+  "verdict": 0,
+  "riskScore": 0,
+  "modelHash": "0x2a6ff07ca9e8f8e6f1c67c47c45b504d766f76d04866e0b614faf822edc57490",
+  "reportHash": "0x4fa7215f5ab2008c64e2b8076368a6098c24d3b2e9f89f41559600edf148459a"
+ },
+ "verifierSignatures": [
+  "0xe064c16dd4c37fef329762c02776a83652ea0aa3cb8edb3492447670a25d766371290f5b3bb3864cc92b174b005df2241c22aad76ae205e3311ab5831ce6aa771c",
+  "0x89ec8fef3183efbb980f7cb51d56b574fbbcf383ba5effe6262831e60304a9c31cb0235cc9a0c4109357418a52fa5ce170059acb0682614424660e8b0fbb758e1b",
+  "0x229dcd554ca340714f8717d385e74646e77d8585fdc6230eb7e0ebe4bf64e5f94b3d8d033e356c62d5a82e82aabf60f3aec49921ac675dfe40cdc0233882a02b1b"
+ ],
+ "verdict": "APPROVED",
+ "riskScore": 0,
+ "reportUri": "out/reports/01-202607-F1-original.json",
+ "evidenceUri": "out/evidence/01-202607-F1-original.json"
+}

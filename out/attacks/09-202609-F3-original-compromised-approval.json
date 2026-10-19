@@ -1,0 +1,27 @@
+{
+ "name": "compromised-verifier-approval",
+ "description": "Verifier node 3 is compromised and colludes with an outside key to approve the under-declared claim.",
+ "targetTag": "09-202609-F3-original",
+ "claim": {
+  "facilityId": 3,
+  "period": 202609,
+  "productionTonnes": 184019,
+  "directEmissionsKg": 266382572,
+  "indirectEmissionsKg": 9513410,
+  "shipmentsRoot": "0x84bf6a61df97739116cfd5691136ea6707249a40de8b98a4c8dce7278a128778",
+  "evidenceHash": "0x62f3385df75b5b4674803b6836eee8222776a72e2df95b7626e117340a0538f6",
+  "nonce": 2
+ },
+ "operatorSignature": "0xd674bb9f09451de881521a786ce92dfd2d94b0f473274ca0b51a8a6e3b1efaf5151848e04a7a29055d14c579ecc994889508d433be2c2110511d5bf6d98d27eb1c",
+ "verification": {
+  "claimDigest": "0x6ac2e4c9e8f13cf50f7dba4062a41ae7e3dd69e92d4c647a32945a00ddfad302",
+  "verdict": 0,
+  "riskScore": 40,
+  "modelHash": "0x2a6ff07ca9e8f8e6f1c67c47c45b504d766f76d04866e0b614faf822edc57490",
+  "reportHash": "0x4c0f7422eedcd5b79ac52df113a77aa0667edcfb6758c2af6e8ea4cbf33e7a8f"
+ },
+ "verifierSignatures": [
+  "0x8151e22edafcd84db2ad1ce478bb57fb3c8dde07fb1546ed824bef57151e7ab153f06020696fa2483badb20cea02969d9844f8a9e948866a72d35e79bfba05b61b",
+  "0x87d116b01bbb8676685d38175cc8b32ba6a5ac18517cbecf39de2c912c98ee9e581675390b94cf52cd268edc76cff7283b89a0465fd5e70683629cba719478ec1c"
+ ]
+}

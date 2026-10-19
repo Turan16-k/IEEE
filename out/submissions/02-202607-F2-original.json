@@ -1,0 +1,35 @@
+{
+ "tag": "02-202607-F2-original",
+ "facilityId": 2,
+ "facilityName": "Marmara Cement - integrated dry kiln (fictional)",
+ "period": 202607,
+ "kind": "original",
+ "claim": {
+  "facilityId": 2,
+  "period": 202607,
+  "productionTonnes": 121344,
+  "directEmissionsKg": 79059729,
+  "indirectEmissionsKg": 4964599,
+  "shipmentsRoot": "0x81e6387b175a9ea3ba566fb249a27e5af55ed1eff63d8bd4bb5f052767197282",
+  "evidenceHash": "0xcaca441b95c3966b1020ee812ef1999f7066cb54e2a1d5f80ededf9f112efb84",
+  "nonce": 0
+ },
+ "claimDigest": "0xf53ac1d2b0e5fbd3a0c54af213c4cab38a4d58b7e72ff0c350acf84749beb77e",
+ "operatorSignature": "0x5c2652aa9b19e3ffa154d4f8f24333d89e8d75e176ebb35783d11ecade284be7274b6a6ec938b5c776cde303911bee1f6352f3851b266ec89fff72aa061136791b",
+ "verification": {
+  "claimDigest": "0xf53ac1d2b0e5fbd3a0c54af213c4cab38a4d58b7e72ff0c350acf84749beb77e",
+  "verdict": 0,
+  "riskScore": 0,
+  "modelHash": "0x2a6ff07ca9e8f8e6f1c67c47c45b504d766f76d04866e0b614faf822edc57490",
+  "reportHash": "0x035dda137a09ad98ec5aef29b932ea822f731273c5d47162567a444ecac01fba"
+ },
+ "verifierSignatures": [
+  "0x64c0cec3ca8062a57f496d789795ec08c71bc78ddea0cb3ce58dba8c6a6f5b652d1a2b640ee82a9fb2bceb8500b314f4512c02da0c482c1847688d998faa92531b",
+  "0x88764f286b9d2425618e2a0a78a492920c2b7dc4b98d00bbb32348b6b45a4ab34fc6be8a01e9473b37443d78075a12af39e3af329ee15c9425fb80addb60a7851c",
+  "0xeab97c0ddbd4427c7bc97f8438f56b49c35201fa96a8c13c95f58fc5bbda56ce71eb4684dc04d5f0a3fdeaf1faf7c93e4e4280cdd4baf842516efeb97acc9c9e1b"
+ ],
+ "verdict": "APPROVED",
+ "riskScore": 0,
+ "reportUri": "out/reports/02-202607-F2-original.json",
+ "evidenceUri": "out/evidence/02-202607-F2-original.json"
+}

@@ -1,0 +1,26 @@
+{
+ "schema": "emispass.shipment-disclosure/1",
+ "submissionTag": "01-202607-F1-original",
+ "facilityId": 1,
+ "facilityName": "Ege Green Steel - EAF rebar mill (fictional)",
+ "installationId": "TR-ETS-DEMO-0001",
+ "shipment": {
+  "shipmentId": "TR-ETS-DEMO-0001-202607-O02",
+  "importer": "0x23618e81E3f5cdF7f54C3d65f7FBc0aBf5B21E8f",
+  "importerName": "EU Importer B (demo, Hamburg)",
+  "cnCode": "7214 20 00",
+  "product": "Concrete reinforcing bars",
+  "quantityKg": 14333581,
+  "directKgPerT": 107,
+  "indirectKgPerT": 184,
+  "period": 202607,
+  "salt": "0xe5a67339c03745758c8384648e80f05a42adf8417943b381d10291ec06453126"
+ },
+ "commitment": "0xf9e6647faeca0937f1bb60a7087691100a15ee9c9a1f0365fd7346981ef13507",
+ "proof": [
+  "0x5201dbf453b5e599d6675f3b339445ef01ec0b9e5a967cd4e5eea8b76fa720c0",
+  "0xeb44698f19e80f87fa9124fec1471202827c35f41a3f35e7f9a3270ef76d9a1a"
+ ],
+ "shipmentsRoot": "0xba857d624cb31e76a01a84736a17ba50ffab77d04da6f8ca9e5274712679cf55",
+ "reportUri": "out/reports/01-202607-F1-original.json"
+}

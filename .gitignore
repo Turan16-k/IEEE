@@ -1,0 +1,12 @@
+node_modules/
+.venv/
+__pycache__/
+.pytest_cache/
+artifacts/
+cache/
+typechain-types/
+coverage/
+.env
+deployments/hardhat.json
+research_notes/
+reports/

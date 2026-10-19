@@ -1,0 +1,5 @@
+numpy>=2.0
+scikit-learn>=1.5
+eth-account>=0.13
+requests>=2.31
+pytest>=8.0

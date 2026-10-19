@@ -1,0 +1,171 @@
+{
+ "label": "ILLUSTRATIVE sample shaped like an EPİAŞ real-time generation export (not real data)",
+ "unit": "MWh",
+ "months": {
+  "202507": {
+   "lignite": 3962063.0,
+   "importedCoal": 6272171.0,
+   "naturalGas": 5931102.0,
+   "hydro": 5618732.0,
+   "wind": 3555318.0,
+   "solar": 3456193.0,
+   "geothermal": 887522.0,
+   "biomass": 600000,
+   "other": 300000
+  },
+  "202508": {
+   "lignite": 4291151.0,
+   "importedCoal": 6419702.0,
+   "naturalGas": 6561650.0,
+   "hydro": 4316020.0,
+   "wind": 3505882.0,
+   "solar": 3343009.0,
+   "geothermal": 896581.0,
+   "biomass": 600000,
+   "other": 300000
+  },
+  "202509": {
+   "lignite": 4248275.0,
+   "importedCoal": 6535410.0,
+   "naturalGas": 6361888.0,
+   "hydro": 3459222.0,
+   "wind": 3247807.0,
+   "solar": 2743836.0,
+   "geothermal": 880909.0,
+   "biomass": 600000,
+   "other": 300000
+  },
+  "202510": {
+   "lignite": 4396986.0,
+   "importedCoal": 6730315.0,
+   "naturalGas": 6055380.0,
+   "hydro": 3192551.0,
+   "wind": 4029844.0,
+   "solar": 2293022.0,
+   "geothermal": 953928.0,
+   "biomass": 600000,
+   "other": 300000
+  },
+  "202511": {
+   "lignite": 3830996.0,
+   "importedCoal": 6772109.0,
+   "naturalGas": 5232154.0,
+   "hydro": 3700182.0,
+   "wind": 3633569.0,
+   "solar": 2020658.0,
+   "geothermal": 864579.0,
+   "biomass": 600000,
+   "other": 300000
+  },
+  "202512": {
+   "lignite": 4405367.0,
+   "importedCoal": 6344296.0,
+   "naturalGas": 4933362.0,
+   "hydro": 4251961.0,
+   "wind": 3650687.0,
+   "solar": 1478035.0,
+   "geothermal": 874881.0,
+   "biomass": 600000,
+   "other": 300000
+  },
+  "202601": {
+   "lignite": 3952255.0,
+   "importedCoal": 6633295.0,
+   "naturalGas": 4878184.0,
+   "hydro": 5415918.0,
+   "wind": 4173395.0,
+   "solar": 1177621.0,
+   "geothermal": 1002378.0,
+   "biomass": 600000,
+   "other": 300000
+  },
+  "202602": {
+   "lignite": 5145272.0,
+   "importedCoal": 6385524.0,
+   "naturalGas": 4818709.0,
+   "hydro": 6100853.0,
+   "wind": 3697794.0,
+   "solar": 1380968.0,
+   "geothermal": 899134.0,
+   "biomass": 600000,
+   "other": 300000
+  },
+  "202603": {
+   "lignite": 4112870.0,
+   "importedCoal": 5765534.0,
+   "naturalGas": 5103411.0,
+   "hydro": 6938581.0,
+   "wind": 2905838.0,
+   "solar": 1699557.0,
+   "geothermal": 861269.0,
+   "biomass": 600000,
+   "other": 300000
+  },
+  "202604": {
+   "lignite": 3770669.0,
+   "importedCoal": 5326120.0,
+   "naturalGas": 5487980.0,
+   "hydro": 7222006.0,
+   "wind": 3402843.0,
+   "solar": 2217466.0,
+   "geothermal": 906786.0,
+   "biomass": 600000,
+   "other": 300000
+  },
+  "202605": {
+   "lignite": 3677766.0,
+   "importedCoal": 5470758.0,
+   "naturalGas": 6293349.0,
+   "hydro": 6930365.0,
+   "wind": 3747991.0,
+   "solar": 3018258.0,
+   "geothermal": 893881.0,
+   "biomass": 600000,
+   "other": 300000
+  },
+  "202606": {
+   "lignite": 4004368.0,
+   "importedCoal": 6286073.0,
+   "naturalGas": 6076208.0,
+   "hydro": 6758227.0,
+   "wind": 3012368.0,
+   "solar": 3361229.0,
+   "geothermal": 918620.0,
+   "biomass": 600000,
+   "other": 300000
+  },
+  "202607": {
+   "lignite": 4311948.0,
+   "importedCoal": 5829860.0,
+   "naturalGas": 6300781.0,
+   "hydro": 5141206.0,
+   "wind": 2958520.0,
+   "solar": 3601599.0,
+   "geothermal": 923521.0,
+   "biomass": 600000,
+   "other": 300000
+  },
+  "202608": {
+   "lignite": 3612875.0,
+   "importedCoal": 5958424.0,
+   "naturalGas": 6244954.0,
+   "hydro": 4135178.0,
+   "wind": 4113269.0,
+   "solar": 3295274.0,
+   "geothermal": 910026.0,
+   "biomass": 600000,
+   "other": 300000
+  },
+  "202609": {
+   "lignite": 3881066.0,
+   "importedCoal": 6405564.0,
+   "naturalGas": 5895844.0,
+   "hydro": 3286241.0,
+   "wind": 3678887.0,
+   "solar": 2896493.0,
+   "geothermal": 955858.0,
+   "biomass": 600000,
+   "other": 300000
+  }
+ }
+}

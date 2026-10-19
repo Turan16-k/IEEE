@@ -1,0 +1,26 @@
+{
+ "schema": "emispass.shipment-disclosure/1",
+ "submissionTag": "09-202609-F3-original",
+ "facilityId": 3,
+ "facilityName": "Anatolia Iron & Steel - BF-BOF flat products (fictional)",
+ "installationId": "TR-ETS-DEMO-0003",
+ "shipment": {
+  "shipmentId": "TR-ETS-DEMO-0003-202609-O04",
+  "importer": "0x23618e81E3f5cdF7f54C3d65f7FBc0aBf5B21E8f",
+  "importerName": "EU Importer B (demo, Hamburg)",
+  "cnCode": "7208 51 20",
+  "product": "Hot-rolled flat products",
+  "quantityKg": 13437823,
+  "directKgPerT": 1448,
+  "indirectKgPerT": 52,
+  "period": 202609,
+  "salt": "0x7f6e188b91e576c9858abcec7eca4b509e65c9e28655c75d6375e1a9159e71f9"
+ },
+ "commitment": "0x9647a848b93756c5405a368859a4e284571f0ef32512e0892676a89550e6b1bd",
+ "proof": [
+  "0xdd6fa2a03d3ab81b48cab0fc49d61a75e1a6a0e24ef6c501c0d613a2bbbc72dc",
+  "0xa5f70a6f2b79db0c199f195865ecdc549d03ce054503e8c32258eca251127b93"
+ ],
+ "shipmentsRoot": "0x84bf6a61df97739116cfd5691136ea6707249a40de8b98a4c8dce7278a128778",
+ "reportUri": "out/reports/09-202609-F3-original.json"
+}

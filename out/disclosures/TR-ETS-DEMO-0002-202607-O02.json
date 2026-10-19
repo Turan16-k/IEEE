@@ -1,0 +1,26 @@
+{
+ "schema": "emispass.shipment-disclosure/1",
+ "submissionTag": "02-202607-F2-original",
+ "facilityId": 2,
+ "facilityName": "Marmara Cement - integrated dry kiln (fictional)",
+ "installationId": "TR-ETS-DEMO-0002",
+ "shipment": {
+  "shipmentId": "TR-ETS-DEMO-0002-202607-O02",
+  "importer": "0x23618e81E3f5cdF7f54C3d65f7FBc0aBf5B21E8f",
+  "importerName": "EU Importer B (demo, Hamburg)",
+  "cnCode": "2523 29 00",
+  "product": "Portland cement",
+  "quantityKg": 1034260,
+  "directKgPerT": 652,
+  "indirectKgPerT": 41,
+  "period": 202607,
+  "salt": "0x713f7306866165a00c8ac015e6da29d3af1e960785f2349d39727cf063db75f8"
+ },
+ "commitment": "0x9369cd2fdfb73744dcdc2c999f7690db0bd22d548b43133966838be183852129",
+ "proof": [
+  "0x9820d667f18bf8ac8859fe14f2eccbb91806038ccf4cc4c3fdf77c47e5aa299f",
+  "0xaf3e2ddc0d80b64b7d07312ee39af4d12fc7be9a74891c3332cc1c51da609b21"
+ ],
+ "shipmentsRoot": "0x81e6387b175a9ea3ba566fb249a27e5af55ed1eff63d8bd4bb5f052767197282",
+ "reportUri": "out/reports/02-202607-F2-original.json"
+}

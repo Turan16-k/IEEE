@@ -1,0 +1,35 @@
+{
+ "tag": "09-202609-F3-original",
+ "facilityId": 3,
+ "facilityName": "Anatolia Iron & Steel - BF-BOF flat products (fictional)",
+ "period": 202609,
+ "kind": "original",
+ "claim": {
+  "facilityId": 3,
+  "period": 202609,
+  "productionTonnes": 184019,
+  "directEmissionsKg": 266382572,
+  "indirectEmissionsKg": 9513410,
+  "shipmentsRoot": "0x84bf6a61df97739116cfd5691136ea6707249a40de8b98a4c8dce7278a128778",
+  "evidenceHash": "0x62f3385df75b5b4674803b6836eee8222776a72e2df95b7626e117340a0538f6",
+  "nonce": 2
+ },
+ "claimDigest": "0x6ac2e4c9e8f13cf50f7dba4062a41ae7e3dd69e92d4c647a32945a00ddfad302",
+ "operatorSignature": "0xd674bb9f09451de881521a786ce92dfd2d94b0f473274ca0b51a8a6e3b1efaf5151848e04a7a29055d14c579ecc994889508d433be2c2110511d5bf6d98d27eb1c",
+ "verification": {
+  "claimDigest": "0x6ac2e4c9e8f13cf50f7dba4062a41ae7e3dd69e92d4c647a32945a00ddfad302",
+  "verdict": 1,
+  "riskScore": 1000,
+  "modelHash": "0x2a6ff07ca9e8f8e6f1c67c47c45b504d766f76d04866e0b614faf822edc57490",
+  "reportHash": "0xc66f3c14270672786a71f82fa7d4599a4b754ba69677bc75d863e1fccda05fc5"
+ },
+ "verifierSignatures": [
+  "0x4475420b7afcaa4d6a095f42dc7ccb599ebafd50d2ae5dd227f2a3498a4511cb60855229d8c8f6293d27151fcf0562de726aa0f26949d25d65fcd0ac3f2d34431b",
+  "0xd46f1fa243d90a6d691acf17b40bab59d4625c8436234ac9e1b59847bce07ea07718bcb84255222f372a4cf3a48ed96a929b71c99e0943b80be6cb33564de1dc1c",
+  "0xe1630b2f141783667f67652063f3f98171c75281b55226578c21c11cb237c3b31cc90160310a06448bfe75780b36829eafb161fd946d251a3f5085b96f32f3a81b"
+ ],
+ "verdict": "FLAGGED",
+ "riskScore": 1000,
+ "reportUri": "out/reports/09-202609-F3-original.json",
+ "evidenceUri": "out/evidence/09-202609-F3-original.json"
+}

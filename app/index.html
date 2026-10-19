@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EmisPass</title>
+  <meta name="description" content="AI-verified, threshold-signed embedded-emissions passports for CBAM and the Turkish ETS.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <div class="brand">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3 4 8v8c0 7 5 11.5 12 13 7-1.5 12-6 12-13V8z" fill="none" stroke="currentColor" stroke-width="2"/><path d="m10.5 16.5 3.5 3.5 7.5-8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <div>
+        <strong>EmisPass</strong>
+        <span>Verifiable embedded-emission passports for CBAM &amp; TR-ETS</span>
+      </div>
+    </div>
+    <div class="chain" id="chain">connecting…</div>
+  </header>
+
+  <nav class="tabs" role="tablist">
+    <button role="tab" data-tab="overview" aria-selected="true">Overview</button>
+    <button role="tab" data-tab="producer">Producer</button>
+    <button role="tab" data-tab="verifier">AI Verifier</button>
+    <button role="tab" data-tab="importer">EU Importer</button>
+    <button role="tab" data-tab="security">Security</button>
+  </nav>
+
+  <main>
+    <!-- OVERVIEW -->
+    <section id="overview" class="panel active">
+      <p class="lede">A Turkish steel or cement exporter that cannot prove its real emissions pays CBAM on punitive <em>default values</em>. EmisPass turns a plant's monthly emission report into a passport that three independent AI verifiers must co-sign before it is anchored on-chain, and that an EU importer can check for its own shipment without seeing anyone else's data.</p>
+      <ol class="flow">
+        <li><b>Operator signs</b><span>monthly activity data &amp; totals (EIP-712)</span></li>
+        <li><b>Signed feeds</b><span>grid meter, fuel supplier, satellite</span></li>
+        <li><b>3 AI verifiers</b><span>reconcile, recalculate, ML anomaly checks</span></li>
+        <li><b>2-of-3 on-chain</b><span>passport anchored, report hash bound</span></li>
+        <li><b>EU importer</b><span>Merkle proof, declares shipment once</span></li>
+      </ol>
+      <div class="kpis" id="kpis"></div>
+      <h2>Passports on-chain</h2>
+      <div class="table-wrap"><table id="passports"><thead><tr><th>#</th><th>Facility</th><th>Period</th><th>Status</th><th>Risk</th><th>Verifier sigs</th><th>Direct tCO2e/t</th><th></th></tr></thead><tbody></tbody></table></div>
+      <p class="note" id="datanote"></p>
+    </section>
+
+    <!-- PRODUCER -->
+    <section id="producer" class="panel">
+      <div class="row"><label>Facility <select id="facilitySel"></select></label></div>
+      <div class="grid2">
+        <div class="card"><h3>Direct emission intensity vs Turkish peers</h3><div id="intensityChart"></div><p class="note">Bars: verified monthly specific direct emissions. Band: p10–p90 of Turkish installations on the same route (Climate TRACE, real data). Dashed: illustrative CBAM default incl. 2026 mark-up.</p></div>
+        <div class="card"><h3>What verified data is worth</h3><div id="cbamBox"></div></div>
+      </div>
+    </section>
+
+    <!-- VERIFIER -->
+    <section id="verifier" class="panel">
+      <div class="row"><label>Passport <select id="passportSel"></select></label><button id="integrityBtn" class="btn">Verify report &amp; evidence hashes</button></div>
+      <div id="integrity" class="integrity"></div>
+      <div class="grid2">
+        <div class="card" id="verdictCard"></div>
+        <div class="card"><h3>Findings</h3><ul id="findings" class="findings"></ul></div>
+      </div>
+    </section>
+
+    <!-- IMPORTER -->
+    <section id="importer" class="panel">
+      <div class="row">
+        <label>Acting as <select id="importerSel"></select></label>
+        <label>Shipment <select id="shipmentSel"></select></label>
+      </div>
+      <div class="grid2">
+        <div class="card"><h3>Disclosed to you by the producer</h3><div id="disclosure"></div></div>
+        <div class="card"><h3>Independent checks</h3>
+          <ol class="checks" id="importerChecks"></ol>
+          <button id="checkBtn" class="btn">Run checks</button>
+          <p class="note">Only a salted commitment of your shipment is on-chain. Other importers' quantities and the plant's process data stay private.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECURITY -->
+    <section id="security" class="panel">
+      <h2>Attacks executed against the deployed contracts</h2>
+      <div class="table-wrap"><table id="attacks"><thead><tr><th>Attack</th><th>Expected defence</th><th>Result</th></tr></thead><tbody></tbody></table></div>
+      <div class="grid2">
+        <div class="card"><h3>Trust boundaries</h3><ul class="plain">
+          <li><b>Operator</b> can lie about activity data → caught by signed third-party feeds and independent recalculation.</li>
+          <li><b>One verifier</b> can be bribed or hacked → k-of-n threshold (2-of-3), duplicate and unregistered signatures ignored.</li>
+          <li><b>Relayer</b> can alter numbers in transit → EIP-712 signatures over every field, nonce blocks replay.</li>
+          <li><b>Importer</b> could reuse a record → leaf bound to its address, declarable once.</li>
+          <li><b>AI model</b> could be swapped → model hash of code, factors and ML config stored per passport.</li>
+        </ul></div>
+        <div class="card"><h3>What stays off-chain</h3><ul class="plain">
+          <li>Plant process data and fuel invoices (only <code>evidenceHash</code> on-chain).</li>
+          <li>Full AI report (only <code>reportHash</code>, verifiable by anyone holding the file).</li>
+          <li>Per-shipment quantities and buyers (salted commitments in a Merkle tree).</li>
+        </ul></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>EmisPass · IEEE ClimateChain Global Hackathon 2026 · Track: Carbon Markets &amp; Emissions Transparency · Facilities and plant data in this demo are <b>fictional/synthetic</b>; peer benchmarks are real Climate TRACE data (CC-BY 4.0).</footer>
+
+  <script src="vendor/ethers-6.17.0.umd.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

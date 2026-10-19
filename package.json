@@ -1,0 +1,22 @@
+{
+  "name": "emispass",
+  "version": "1.0.0",
+  "private": true,
+  "description": "EmisPass - AI-verified, threshold-signed embedded-emissions passports for CBAM / TR-ETS (IEEE ClimateChain Global Hackathon 2026)",
+  "license": "MIT",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "chain": "hardhat node",
+    "deploy:local": "hardhat run scripts/deploy.js --network localhost",
+    "deploy:sepolia": "hardhat run scripts/deploy.js --network sepolia",
+    "anchor:local": "hardhat run scripts/anchor.js --network localhost",
+    "anchor:sepolia": "hardhat run scripts/anchor.js --network sepolia"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "@openzeppelin/contracts": "^5.1.0",
+    "dotenv": "^16.4.5",
+    "hardhat": "^2.22.17"
+  }
+}
