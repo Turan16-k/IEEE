@@ -63,7 +63,12 @@
     S.s5p = await getJSON("data/sentinel5p/iskenderun-bay.json").catch(() => null);
     S.ct = await getJSON("data/climatetrace/tur_industrial_assets.json").catch(() => null);
 
+    // A page served from the internet must not probe the visitor's loopback RPC: browsers
+    // answer with a local-network permission prompt instead of an error.
+    const loopbackRpc = /^https?:\/\/(127\.0\.0\.1|localhost)(:|\/|$)/.test(S.dep.rpcUrl || "");
+    const localPage = ["localhost", "127.0.0.1", ""].includes(location.hostname);
     try {
+      if (loopbackRpc && !localPage) throw new Error("loopback RPC not reachable from a public page");
       S.provider = new ethers.JsonRpcProvider(S.dep.rpcUrl, S.dep.chainId, { staticNetwork: true });
       S.block = await withTimeout(S.provider.getBlockNumber(), 4000);
       const code = await S.provider.getCode(S.dep.contracts.EmissionPassport);
@@ -73,6 +78,7 @@
     } catch (e) {
       S.live = false;
       if (S.provider) S.provider.destroy();
+      S.provider = null;
     }
 
     const byId = Object.fromEntries((S.log ? S.log.passports : []).map((p) => [p.passportId, p]));
