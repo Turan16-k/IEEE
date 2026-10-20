@@ -27,12 +27,16 @@ EmisPass turns a plant's monthly emission report into a **verifiable passport**:
 - The `EmissionPassport` contract anchors the passport only when **2 of 3 verifiers** sign the exact claim. It stores the verdict, the risk score and hashes of the report, the evidence and the model.
 - Each **EU importer** gets only its own shipment record and a Merkle proof. It verifies on-chain and declares the shipment exactly once; no one else can reuse it.
 - A regulator can revoke a passport after a site visit. Flagged months stay visible, and corrections are possible.
+- **Try to cheat:** anyone can play the dishonest plant manager in the dashboard. The browser runs the same exported ML models as the verifier nodes and verifies feed signatures, so you can watch a 30 % fuel under-declaration get caught live.
+- **Practical output:** one-click export in the key fields of the EU CBAM communication template, plain-language summaries in Turkish and English, and wallet-based declaration and revocation.
 
 ## How we built it
 - **Contracts:** Solidity 0.8.28 + OpenZeppelin 5 (AccessControl, EIP712, ECDSA, MerkleProof); Hardhat. 19 tests.
 - **AI verifier:** Python with scikit-learn (GradientBoostingRegressor, IsolationForest) and eth-account for EIP-712 and EIP-191 signing. The pipeline is deterministic, so honest nodes produce byte-identical reports. 9 tests.
 - **Real data:** Climate TRACE API v6 assets for Türkiye (BF-BOF 1.90, EAF median 0.108, cement median 0.72 tCO2e/t).
-- **Dashboard:** vanilla JS + ethers v6. It reads the contract live and has Producer, AI Verifier, EU Importer and Security views.
+- **Real satellite data:** Copernicus Sentinel-5P tropospheric NO₂ over the İskenderun Bay steel cluster, read from cloud-optimised GeoTIFFs with HTTP range requests (no account, no GDAL).
+- **Dashboard:** vanilla JS + ethers v6, bilingual (EN/TR). It reads the contract live; MetaMask is used for declarations and revocations. The in-browser verifier (`app/verifier.js`) is parity-tested against Python in CI.
+- **Optional LLM layer:** Claude (`claude-opus-5-5`, structured output) writes the manager summaries from the report. The verdict always comes from the deterministic checks.
 
 ## Demo
 - 10 passports: 9 approved, 1 flagged under-declaration (coking coal −30 %), caught by four independent checks and then corrected.
@@ -57,6 +61,6 @@ Blockchain does not fix bad input data, and the 2022 tokenised-carbon collapse p
 - ZK range proofs for confidential totals.
 
 ## Honesty note
-The facilities and plant data in the demo are fictional and synthetic. Peer benchmarks are real Climate TRACE data (CC-BY 4.0). CBAM default values in the dashboard are illustrative.
+The facilities and plant data in the demo are fictional and synthetic. Peer benchmarks (Climate TRACE, CC-BY 4.0) and the satellite NO₂ series (Copernicus Sentinel-5P) are real data. CBAM default values in the dashboard are illustrative.
 
-**Links:** GitHub repo · demo video · testnet contracts (Etherscan) · docs/SECURITY.md · docs/IMPACT.md
+**Links:** GitHub https://github.com/Turan16-k/IEEE · Live dashboard https://turan16-k.github.io/IEEE/app/ · Try to cheat https://turan16-k.github.io/IEEE/app/?tab=simulator&preset=fuel · demo video · docs/SECURITY.md · docs/IMPACT.md

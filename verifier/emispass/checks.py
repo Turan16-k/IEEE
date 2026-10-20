@@ -245,15 +245,21 @@ def _history_features(rec: dict, route: str) -> list[float]:
     ]
 
 
-def check_isolation_forest(record: dict, history: list[dict], route: str) -> list[Finding]:
-    if len(history) < 6:
-        return [Finding("ml-anomaly", "low", "Insufficient history for anomaly model", f"{len(history)} months available, 6 needed.")]
+def fit_history_model(history: list[dict], route: str) -> dict:
+    """Isolation Forest on standardised monthly features of the facility's verified history."""
     X = np.array([_history_features(h, route) for h in history])
     mu, sd = X.mean(axis=0), X.std(axis=0) + 1e-9
     model = IsolationForest(n_estimators=200, contamination="auto", random_state=ML_SEED).fit((X - mu) / sd)
+    return {"model": model, "mu": mu, "sd": sd, "floor": float(model.score_samples((X - mu) / sd).min())}
+
+
+def check_isolation_forest(record: dict, history: list[dict], route: str) -> list[Finding]:
+    if len(history) < 6:
+        return [Finding("ml-anomaly", "low", "Insufficient history for anomaly model", f"{len(history)} months available, 6 needed.")]
+    fitted = fit_history_model(history, route)
+    model, mu, sd, floor = fitted["model"], fitted["mu"], fitted["sd"], fitted["floor"]
     x = (np.array(_history_features(record, route)) - mu) / sd
     score = float(model.score_samples([x])[0])
-    floor = float(model.score_samples((X - mu) / sd).min())
     names = ["direct kg/t", "indirect kg/t", "declared/independent ratio", "production per satellite unit"]
     worst = int(np.argmax(np.abs(x)))
     # Isolation-forest path lengths saturate for extreme outliers, so a large standardised

@@ -1,0 +1,43 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - name: Contract tests
+        run: npx hardhat test
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: verifier/requirements.txt
+      - run: pip install -r verifier/requirements.txt
+      - name: Verifier tests
+        working-directory: verifier
+        run: python -m pytest -q
+
+      - name: End-to-end demo on a local chain
+        env:
+          PYTHONPATH: verifier
+        run: |
+          npx hardhat node > /tmp/node.log 2>&1 &
+          sleep 8
+          python -m emispass simulate
+          npx hardhat run scripts/deploy.js --network localhost
+          python -m emispass run --no-llm
+          npx hardhat run scripts/anchor.js --network localhost
+          node scripts/check-simulator.js
+          node -e "const l=require('./out/anchor-log.json'); const b=l.attacks.filter(a=>a.blocked).length; console.log(b+'/'+l.attacks.length+' attacks blocked'); if(b!==l.attacks.length) process.exit(1)"

@@ -13,96 +13,134 @@
       <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3 4 8v8c0 7 5 11.5 12 13 7-1.5 12-6 12-13V8z" fill="none" stroke="currentColor" stroke-width="2"/><path d="m10.5 16.5 3.5 3.5 7.5-8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
       <div>
         <strong>EmisPass</strong>
-        <span>Verifiable embedded-emission passports for CBAM &amp; TR-ETS</span>
+        <span data-i18n="tagline"></span>
       </div>
     </div>
-    <div class="chain" id="chain">connecting…</div>
+    <div class="top-right">
+      <div class="chain" id="chain">…</div>
+      <div class="top-actions">
+        <button class="btn ghost" id="walletBtn" data-i18n="connect"></button>
+        <div class="lang" role="group" aria-label="Language">
+          <button data-lang="tr">TR</button><button data-lang="en">EN</button>
+        </div>
+      </div>
+    </div>
   </header>
+  <div id="toast" class="toast" role="status" hidden></div>
 
   <nav class="tabs" role="tablist">
-    <button role="tab" data-tab="overview" aria-selected="true">Overview</button>
-    <button role="tab" data-tab="producer">Producer</button>
-    <button role="tab" data-tab="verifier">AI Verifier</button>
-    <button role="tab" data-tab="importer">EU Importer</button>
-    <button role="tab" data-tab="security">Security</button>
+    <button role="tab" data-tab="overview" data-i18n="tabOverview" aria-selected="true"></button>
+    <button role="tab" data-tab="simulator" data-i18n="tabSimulator"></button>
+    <button role="tab" data-tab="producer" data-i18n="tabProducer"></button>
+    <button role="tab" data-tab="verifier" data-i18n="tabVerifier"></button>
+    <button role="tab" data-tab="importer" data-i18n="tabImporter"></button>
+    <button role="tab" data-tab="realdata" data-i18n="tabRealData"></button>
+    <button role="tab" data-tab="security" data-i18n="tabSecurity"></button>
   </nav>
 
   <main>
     <!-- OVERVIEW -->
     <section id="overview" class="panel active">
-      <p class="lede">A Turkish steel or cement exporter that cannot prove its real emissions pays CBAM on punitive <em>default values</em>. EmisPass turns a plant's monthly emission report into a passport that three independent AI verifiers must co-sign before it is anchored on-chain, and that an EU importer can check for its own shipment without seeing anyone else's data.</p>
+      <p class="lede" data-i18n-html="lede"></p>
       <ol class="flow">
-        <li><b>Operator signs</b><span>monthly activity data &amp; totals (EIP-712)</span></li>
-        <li><b>Signed feeds</b><span>grid meter, fuel supplier, satellite</span></li>
-        <li><b>3 AI verifiers</b><span>reconcile, recalculate, ML anomaly checks</span></li>
-        <li><b>2-of-3 on-chain</b><span>passport anchored, report hash bound</span></li>
-        <li><b>EU importer</b><span>Merkle proof, declares shipment once</span></li>
+        <li><b data-i18n="flow1"></b><span data-i18n="flow1s"></span></li>
+        <li><b data-i18n="flow2"></b><span data-i18n="flow2s"></span></li>
+        <li><b data-i18n="flow3"></b><span data-i18n="flow3s"></span></li>
+        <li><b data-i18n="flow4"></b><span data-i18n="flow4s"></span></li>
+        <li><b data-i18n="flow5"></b><span data-i18n="flow5s"></span></li>
       </ol>
       <div class="kpis" id="kpis"></div>
-      <h2>Passports on-chain</h2>
-      <div class="table-wrap"><table id="passports"><thead><tr><th>#</th><th>Facility</th><th>Period</th><th>Status</th><th>Risk</th><th>Verifier sigs</th><th>Direct tCO2e/t</th><th></th></tr></thead><tbody></tbody></table></div>
+      <h2 data-i18n="passportsTitle"></h2>
+      <div class="table-wrap"><table id="passports"><thead><tr><th>#</th><th data-i18n="thFacility"></th><th data-i18n="thPeriod"></th><th data-i18n="thStatus"></th><th data-i18n="thRisk"></th><th data-i18n="thSigs"></th><th data-i18n="thDirect"></th><th></th></tr></thead><tbody></tbody></table></div>
       <p class="note" id="datanote"></p>
+    </section>
+
+    <!-- SIMULATOR -->
+    <section id="simulator" class="panel">
+      <h2 data-i18n="simTitle"></h2>
+      <p class="lede" data-i18n="simLede"></p>
+      <div class="row"><label><span data-i18n="facility"></span> <select id="simFacility"></select></label></div>
+      <div class="presets"><span class="note" data-i18n="presets"></span><div id="simPresets"></div></div>
+      <div class="grid2">
+        <div class="card" id="simControls"></div>
+        <div class="card" id="simResult"></div>
+      </div>
+      <div class="card" style="margin-top:16px"><h3 data-i18n="findings"></h3><ul id="simFindings" class="findings"></ul></div>
+      <p class="note" data-i18n="simNote"></p>
     </section>
 
     <!-- PRODUCER -->
     <section id="producer" class="panel">
-      <div class="row"><label>Facility <select id="facilitySel"></select></label></div>
+      <div class="row"><label><span data-i18n="facility"></span> <select id="facilitySel"></select></label></div>
       <div class="grid2">
-        <div class="card"><h3>Direct emission intensity vs Turkish peers</h3><div id="intensityChart"></div><p class="note">Bars: verified monthly specific direct emissions. Band: p10–p90 of Turkish installations on the same route (Climate TRACE, real data). Dashed: illustrative CBAM default incl. 2026 mark-up.</p></div>
-        <div class="card"><h3>What verified data is worth</h3><div id="cbamBox"></div></div>
+        <div class="card"><h3 data-i18n="chartTitle"></h3><div id="intensityChart"></div><p class="note" data-i18n="chartNote"></p></div>
+        <div class="card"><h3 data-i18n="worthTitle"></h3><div id="cbamBox"></div>
+          <div class="btnrow"><button class="btn" id="dlCsv" data-i18n="dlCsv"></button><button class="btn ghost" id="dlJson" data-i18n="dlJson"></button></div>
+        </div>
       </div>
     </section>
 
     <!-- VERIFIER -->
     <section id="verifier" class="panel">
-      <div class="row"><label>Passport <select id="passportSel"></select></label><button id="integrityBtn" class="btn">Verify report &amp; evidence hashes</button></div>
+      <div class="row"><label><span data-i18n="passport"></span> <select id="passportSel"></select></label>
+        <button id="integrityBtn" class="btn" data-i18n="verifyHashes"></button>
+        <button id="revokeBtn" class="btn danger" data-i18n="revoke"></button>
+      </div>
       <div id="integrity" class="integrity"></div>
       <div class="grid2">
-        <div class="card" id="verdictCard"></div>
-        <div class="card"><h3>Findings</h3><ul id="findings" class="findings"></ul></div>
+        <div>
+          <div class="card" id="verdictCard"></div>
+          <div class="card summary" id="summaryCard" style="margin-top:16px"></div>
+        </div>
+        <div class="card"><h3 data-i18n="findings"></h3><ul id="findings" class="findings"></ul></div>
       </div>
     </section>
 
     <!-- IMPORTER -->
     <section id="importer" class="panel">
       <div class="row">
-        <label>Acting as <select id="importerSel"></select></label>
-        <label>Shipment <select id="shipmentSel"></select></label>
+        <label><span data-i18n="actingAs"></span> <select id="importerSel"></select></label>
+        <label><span data-i18n="shipment"></span> <select id="shipmentSel"></select></label>
       </div>
       <div class="grid2">
-        <div class="card"><h3>Disclosed to you by the producer</h3><div id="disclosure"></div></div>
-        <div class="card"><h3>Independent checks</h3>
-          <ol class="checks" id="importerChecks"></ol>
-          <button id="checkBtn" class="btn">Run checks</button>
-          <p class="note">Only a salted commitment of your shipment is on-chain. Other importers' quantities and the plant's process data stay private.</p>
+        <div class="card"><h3 data-i18n="disclosed"></h3><div id="disclosure"></div>
+          <div class="btnrow"><button class="btn ghost" id="dlShipCsv" data-i18n="dlCsv"></button></div>
         </div>
+        <div class="card"><h3 data-i18n="indepChecks"></h3>
+          <ol class="checks" id="importerChecks"></ol>
+          <div class="btnrow"><button id="checkBtn" class="btn" data-i18n="runChecks"></button><button id="declareBtn" class="btn ghost" data-i18n="declareWallet"></button></div>
+          <p class="note" data-i18n="privacy"></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- REAL DATA -->
+    <section id="realdata" class="panel">
+      <h2 data-i18n="realTitle"></h2>
+      <div class="card"><h3 data-i18n="s5pTitle"></h3><div id="s5pChart"></div><p class="note" id="s5pNote"></p></div>
+      <div class="card" style="margin-top:16px"><h3 data-i18n="ctTitle"></h3><div id="ctChart"></div>
+        <div class="table-wrap" style="margin-top:12px"><table id="ctTable"><thead><tr><th data-i18n="routeCol"></th><th data-i18n="assetsCol"></th><th data-i18n="medianCol"></th><th data-i18n="bandCol"></th><th data-i18n="totalCol"></th></tr></thead><tbody></tbody></table></div>
+        <p class="note" id="ctNote"></p>
       </div>
     </section>
 
     <!-- SECURITY -->
     <section id="security" class="panel">
-      <h2>Attacks executed against the deployed contracts</h2>
-      <div class="table-wrap"><table id="attacks"><thead><tr><th>Attack</th><th>Expected defence</th><th>Result</th></tr></thead><tbody></tbody></table></div>
+      <h2 data-i18n="attacksTitle"></h2>
+      <div class="table-wrap"><table id="attacks"><thead><tr><th data-i18n="thAttack"></th><th data-i18n="thDefence"></th><th data-i18n="thResult"></th></tr></thead><tbody></tbody></table></div>
       <div class="grid2">
-        <div class="card"><h3>Trust boundaries</h3><ul class="plain">
-          <li><b>Operator</b> can lie about activity data → caught by signed third-party feeds and independent recalculation.</li>
-          <li><b>One verifier</b> can be bribed or hacked → k-of-n threshold (2-of-3), duplicate and unregistered signatures ignored.</li>
-          <li><b>Relayer</b> can alter numbers in transit → EIP-712 signatures over every field, nonce blocks replay.</li>
-          <li><b>Importer</b> could reuse a record → leaf bound to its address, declarable once.</li>
-          <li><b>AI model</b> could be swapped → model hash of code, factors and ML config stored per passport.</li>
-        </ul></div>
-        <div class="card"><h3>What stays off-chain</h3><ul class="plain">
-          <li>Plant process data and fuel invoices (only <code>evidenceHash</code> on-chain).</li>
-          <li>Full AI report (only <code>reportHash</code>, verifiable by anyone holding the file).</li>
-          <li>Per-shipment quantities and buyers (salted commitments in a Merkle tree).</li>
-        </ul></div>
+        <div class="card"><h3 data-i18n="trustTitle"></h3><ul class="plain" id="trustList"></ul></div>
+        <div class="card"><h3 data-i18n="offchainTitle"></h3><ul class="plain" id="offchainList"></ul></div>
       </div>
     </section>
   </main>
 
-  <footer>EmisPass · IEEE ClimateChain Global Hackathon 2026 · Track: Carbon Markets &amp; Emissions Transparency · Facilities and plant data in this demo are <b>fictional/synthetic</b>; peer benchmarks are real Climate TRACE data (CC-BY 4.0).</footer>
+  <footer data-i18n-html="footer"></footer>
 
   <script src="vendor/ethers-6.17.0.umd.min.js"></script>
+  <script src="i18n.js"></script>
+  <script src="verifier.js"></script>
+  <script src="cbam.js"></script>
   <script src="app.js"></script>
 </body>
 </html>

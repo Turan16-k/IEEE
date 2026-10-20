@@ -1,7 +1,7 @@
 {
  "chainId": 31337,
- "contract": "0x922D6956C99E12DFeB3224DEA977D0939758A1Fe",
- "modelHash": "0x2a6ff07ca9e8f8e6f1c67c47c45b504d766f76d04866e0b614faf822edc57490",
+ "contract": "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
+ "modelHash": "0x9418d84b1534fbfde03d5878a8e5846cd6c885d16e3cc761403bc108e43c4161",
  "submissions": [
   {
    "tag": "01-202607-F1-original",
@@ -11,7 +11,9 @@
    "verdict": "APPROVED",
    "riskScore": 0,
    "reportUri": "out/reports/01-202607-F1-original.json",
-   "evidenceUri": "out/evidence/01-202607-F1-original.json"
+   "evidenceUri": "out/evidence/01-202607-F1-original.json",
+   "explanationUri": "out/explanations/01-202607-F1-original.json",
+   "explanationSource": "template"
   },
   {
    "tag": "02-202607-F2-original",
@@ -21,7 +23,9 @@
    "verdict": "APPROVED",
    "riskScore": 0,
    "reportUri": "out/reports/02-202607-F2-original.json",
-   "evidenceUri": "out/evidence/02-202607-F2-original.json"
+   "evidenceUri": "out/evidence/02-202607-F2-original.json",
+   "explanationUri": "out/explanations/02-202607-F2-original.json",
+   "explanationSource": "template"
   },
   {
    "tag": "03-202607-F3-original",
@@ -31,7 +35,9 @@
    "verdict": "APPROVED",
    "riskScore": 0,
    "reportUri": "out/reports/03-202607-F3-original.json",
-   "evidenceUri": "out/evidence/03-202607-F3-original.json"
+   "evidenceUri": "out/evidence/03-202607-F3-original.json",
+   "explanationUri": "out/explanations/03-202607-F3-original.json",
+   "explanationSource": "template"
   },
   {
    "tag": "04-202608-F1-original",
@@ -41,7 +47,9 @@
    "verdict": "APPROVED",
    "riskScore": 0,
    "reportUri": "out/reports/04-202608-F1-original.json",
-   "evidenceUri": "out/evidence/04-202608-F1-original.json"
+   "evidenceUri": "out/evidence/04-202608-F1-original.json",
+   "explanationUri": "out/explanations/04-202608-F1-original.json",
+   "explanationSource": "template"
   },
   {
    "tag": "05-202608-F2-original",
@@ -51,7 +59,9 @@
    "verdict": "APPROVED",
    "riskScore": 0,
    "reportUri": "out/reports/05-202608-F2-original.json",
-   "evidenceUri": "out/evidence/05-202608-F2-original.json"
+   "evidenceUri": "out/evidence/05-202608-F2-original.json",
+   "explanationUri": "out/explanations/05-202608-F2-original.json",
+   "explanationSource": "template"
   },
   {
    "tag": "06-202608-F3-original",
@@ -61,7 +71,9 @@
    "verdict": "APPROVED",
    "riskScore": 0,
    "reportUri": "out/reports/06-202608-F3-original.json",
-   "evidenceUri": "out/evidence/06-202608-F3-original.json"
+   "evidenceUri": "out/evidence/06-202608-F3-original.json",
+   "explanationUri": "out/explanations/06-202608-F3-original.json",
+   "explanationSource": "template"
   },
   {
    "tag": "07-202609-F1-original",
@@ -71,7 +83,9 @@
    "verdict": "APPROVED",
    "riskScore": 0,
    "reportUri": "out/reports/07-202609-F1-original.json",
-   "evidenceUri": "out/evidence/07-202609-F1-original.json"
+   "evidenceUri": "out/evidence/07-202609-F1-original.json",
+   "explanationUri": "out/explanations/07-202609-F1-original.json",
+   "explanationSource": "template"
   },
   {
    "tag": "08-202609-F2-original",
@@ -81,7 +95,9 @@
    "verdict": "APPROVED",
    "riskScore": 0,
    "reportUri": "out/reports/08-202609-F2-original.json",
-   "evidenceUri": "out/evidence/08-202609-F2-original.json"
+   "evidenceUri": "out/evidence/08-202609-F2-original.json",
+   "explanationUri": "out/explanations/08-202609-F2-original.json",
+   "explanationSource": "template"
   },
   {
    "tag": "09-202609-F3-original",
@@ -91,7 +107,9 @@
    "verdict": "FLAGGED",
    "riskScore": 1000,
    "reportUri": "out/reports/09-202609-F3-original.json",
-   "evidenceUri": "out/evidence/09-202609-F3-original.json"
+   "evidenceUri": "out/evidence/09-202609-F3-original.json",
+   "explanationUri": "out/explanations/09-202609-F3-original.json",
+   "explanationSource": "template"
   },
   {
    "tag": "10-202609-F3-correction",
@@ -101,7 +119,9 @@
    "verdict": "APPROVED",
    "riskScore": 0,
    "reportUri": "out/reports/10-202609-F3-correction.json",
-   "evidenceUri": "out/evidence/10-202609-F3-correction.json"
+   "evidenceUri": "out/evidence/10-202609-F3-correction.json",
+   "explanationUri": "out/explanations/10-202609-F3-correction.json",
+   "explanationSource": "template"
   }
  ],
  "disclosures": [
@@ -350,5 +370,6 @@
    "name": "compromised-verifier-approval",
    "targetTag": "09-202609-F3-original"
   }
- ]
+ ],
+ "simulatorUri": "out/simulator.json"
 }

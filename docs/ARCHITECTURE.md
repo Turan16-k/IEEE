@@ -125,3 +125,40 @@ In production these files go to content-addressed storage such as IPFS or Fileco
 | Signed meter feed | Distribution company / EPİAŞ settlement meter data, signed by the data owner |
 | Signed fuel feed | e-invoice (e-Fatura) or customs (GİB, BOTAŞ, port) records, signed at source |
 | Climate TRACE cache | Live API `api.climatetrace.org/v6/assets?countries=TUR&subsectors=…` (`python -m emispass fetch-climatetrace`) |
+
+## Browser verifier ("Try to cheat")
+
+`verifier/emispass/export.py` serialises the trained models into `out/simulator.json`:
+- every tree of the `GradientBoostingRegressor`, node by node;
+- every tree of each facility's `IsolationForest`, with the per-leaf path lengths;
+- the emission factors, tolerances, Climate TRACE benchmarks and the exact signed feed messages.
+
+`app/verifier.js` runs the same seven checks on top of that file. Trees are walked with float32 inputs, as scikit-learn does, and feed signatures are verified with `ethers.verifyMessage` over the signed bytes. Two tests guard the equivalence:
+- `verifier/tests/test_export.py`: the exported models reproduce scikit-learn to within 1e-9.
+- `scripts/check-simulator.js`: the browser verdicts, risk scores and finding severities equal the Python reports. CI runs it on every push.
+
+## Plain-language summaries
+
+`verifier/emispass/explain.py` writes `out/explanations/<tag>.json` with a Turkish and an English paragraph plus next actions for the plant manager.
+
+- **Default:** a deterministic template built from the report.
+- **With Claude API credentials:** Claude (`claude-opus-5-5`, structured JSON output, server-side refusal fallback) rewrites the summary from the report's findings. The prompt forbids changing the verdict or inventing numbers.
+- **On any error:** the template is used.
+
+The verdict and the signed `reportHash` never depend on the summary.
+
+## Real Sentinel-5P data
+
+`verifier/emispass/sources/sentinel5p.py` reads Copernicus Sentinel-5P TROPOMI L2 tropospheric NO₂ from MEEO's cloud-optimised GeoTIFFs on AWS Open Data (`s3://meeo-s5p`). It needs no account and no GDAL; `tifffile` and HTTP range requests are enough.
+
+For each sampled day it:
+1. picks the orbit over Türkiye at about 10:45 UTC;
+2. keeps pixels with `qa_value ≥ 0.75`;
+3. computes the mean NO₂ over the industrial box minus a rural background box.
+
+Monthly means are cached in `data/sentinel5p/<area>.json` and shown in the dashboard. In production the same function, pointed at an installation's box, replaces the synthetic per-plant activity signal.
+
+## Wallet actions and CBAM export
+
+- **Wallet:** the dashboard connects to any EIP-1193 wallet such as MetaMask, switching to or adding the deployment's chain. An importer can `declareShipment` for its own disclosure, and an account holding `REGULATOR_ROLE` can `revokePassport` with a reason. Without a reachable chain these buttons are hidden and the dashboard runs in snapshot mode.
+- **CBAM export:** `app/cbam.js` maps a passport, or a passport plus one shipment, onto the key fields of the CBAM communication template for installations. These are the installation, reporting period, CN code, specific direct and indirect emissions, determination method, carbon price paid and the verification references (passport id, report, evidence and model hashes, contract, chain). It exports CSV or JSON.

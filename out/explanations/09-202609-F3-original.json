@@ -1,0 +1,13 @@
+{
+ "tr": "Anatolia Iron & Steel - BF-BOF flat products (fictional) için 2026-09 beyanı işaretlendi (risk 1000/1000). 3 ciddi bulgu var; beyan edilen doğrudan emisyon, bağımsız verilerden hesaplanandan %22 düşük. Pasaport bu haliyle AB ithalatçıları tarafından kullanılamaz.",
+ "en": "The 2026-09 claim of Anatolia Iron & Steel - BF-BOF flat products (fictional) is flagged (risk 1000/1000). There are 3 serious findings; declared direct emissions are 22% below the independent recalculation. The passport cannot be used by EU importers as it stands.",
+ "actionsTr": [
+  "Yakıt tüketimini tedarikçi faturalarıyla mutabık hale getirin.",
+  "Düzeltilmiş beyanı aynı dönem için yeniden gönderin."
+ ],
+ "actionsEn": [
+  "Reconcile fuel consumption with supplier invoices.",
+  "Resubmit a corrected claim for the same period."
+ ],
+ "source": "template"
+}

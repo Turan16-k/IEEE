@@ -11,7 +11,7 @@ from pathlib import Path
 
 import numpy as np
 
-from . import node, simulate
+from . import explain, export, node, simulate
 from .checks import train_expected_intensity_model
 from .crypto import (
     CLAIM_FIELDS,
@@ -69,7 +69,7 @@ def hash_int(s: str) -> int:
     return int(keccak_hex(s.encode())[2:18], 16)
 
 
-def run(deployment_path: Path) -> dict:
+def run(deployment_path: Path, use_llm: bool = True) -> dict:
     dep = json.loads(Path(deployment_path).read_text(encoding="utf-8"))
     dom = domain(dep["chainId"], dep["contracts"]["EmissionPassport"])
 
@@ -191,6 +191,17 @@ def run(deployment_path: Path) -> dict:
 
         if decl["kind"] == "original" and report["verdict"] == "FLAGGED":
             manifest["attacks"].append(_compromised_approval(tag, claim, claim_digest, operator_sig, dom, mhash))
+
+    for s in manifest["submissions"]:
+        report = json.loads((ROOT / s["reportUri"]).read_text(encoding="utf-8"))
+        summary = explain.summarize(report, use_llm=use_llm)
+        _write(OUT / "explanations" / f"{s['tag']}.json", summary)
+        s["explanationUri"] = f"out/explanations/{s['tag']}.json"
+        s["explanationSource"] = summary["source"]
+
+    bundle = export.simulator_bundle(dataset, benchmarks, ctx_base["intensityModel"], max(simulate.ANCHORED_PERIODS))
+    _write(OUT / "simulator.json", bundle)
+    manifest["simulatorUri"] = "out/simulator.json"
 
     _write(OUT / "manifest.json", manifest)
     return manifest

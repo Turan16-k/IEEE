@@ -7,9 +7,10 @@
 | Parça | Durum | Nerede |
 |---|---|---|
 | Akıllı sözleşmeler (FacilityRegistry, EmissionPassport) | ✅ 19 test geçiyor | `contracts/`, `test/` |
-| Yapay zekâ doğrulayıcı (7 kontrol, 2 ML modeli, 3 düğüm) | ✅ 9 test geçiyor | `verifier/emispass/` |
+| Yapay zekâ doğrulayıcı (7 kontrol, 2 ML modeli, 3 düğüm) | ✅ 12 test geçiyor | `verifier/emispass/` |
+| Tarayıcıdaki doğrulayıcı (Hileyi dene) | ✅ Python ile eşdeğerlik testi geçiyor | `app/verifier.js` |
 | Uçtan uca demo: 10 pasaport, 1 sahtecilik yakalanıyor, 6/6 saldırı engelleniyor | ✅ | `run-demo.ps1` |
-| Web paneli (5 sekme, zincirden canlı okuma) | ✅ | `app/` |
+| Web paneli (7 sekme, TR/EN, zincirden canlı okuma, MetaMask) | ✅ | `app/` |
 | Mimari ve teknik şartname | ✅ | `docs/ARCHITECTURE.md` |
 | Güvenlik ve veri bütünlüğü değerlendirmesi (STRIDE) | ✅ | `docs/SECURITY.md` |
 | İklim etki değerlendirmesi (3 senaryolu CO2 projeksiyonu) | ✅ | `docs/IMPACT.md` |
@@ -38,12 +39,12 @@ git push -u origin main
 ```
 GitHub'da depo sayfasında Settings → Pages → "Deploy from branch" → `main` / `(root)` seç. Birkaç dakika sonra panel `https://<kullanici-adin>.github.io/emispass/app/` adresinde çalışır. Zincire erişemediğinde otomatik olarak "snapshot" moduna geçer ve kayıtlı demo verisini gösterir.
 
-### 3. Herkese açık testnet (isteğe bağlı ama puan kazandırır, 30–45 dk)
-Rapordaki öneri doğrulanmış bir testnet sözleşmesi göstermekti; bunu yaparsan "çalışan prototip" iddian çok güçlenir. Adım adım anlatım `docs/DEPLOY.md` dosyasında:
-- Yeni bir MetaMask cüzdanı aç ve bir Sepolia faucet'tan yaklaşık 0,05 ETH al.
-- `.env.example` dosyasını `.env` olarak kopyala ve anahtarlarını gir.
-- `.\run-demo.ps1 -Network sepolia` komutunu çalıştır, ardından `npx hardhat verify ...` ile Etherscan doğrulamasını yap.
-- Etherscan bağlantılarını README'ye ve Devpost'a ekle.
+### 3. Herkese açık testnet (isteğe bağlı ama puan kazandırır, ~20 dk)
+Panel şu an kayıtlı demo verisini gösteriyor. Testnet'e geçersek jürinin tarayıcısı gerçek blokzincirden canlı okur. Adımlar (proje klasöründe CMD):
+1. `node scripts/setup-testnet.js` komutunu çalıştır. Yeni bir cüzdan ve demo anahtarları üretip `.env` dosyasına yazar (bu dosya GitHub'a yüklenmez) ve ekrana bir adres yazar.
+2. Bu adrese bir Sepolia faucet'tan yaklaşık 0,05 test ETH al. Örneğin https://cloud.google.com/application/web3/faucet/ethereum/sepolia (Google hesabıyla giriş yeterli).
+3. `powershell -ExecutionPolicy Bypass -File run-demo.ps1 -Network sepolia` komutunu çalıştır. Dağıtım, doğrulama, zincire yazma ve saldırı testleri Sepolia'da yapılır.
+4. Gönder: `git add deployments/sepolia.json out` → `git commit -m "Sepolia deployment"` → `git push`. GitHub Pages'teki panel artık Sepolia'dan canlı okur.
 
 ### 4. Video (1–2 saat)
 - `docs/DEMO_SCRIPT.md` dosyasındaki senaryoyu takip et. Süre **3:00–3:30** olsun; bu aralık hem Devpost'un hem IEEE sayfasının kuralını karşılar.
@@ -69,6 +70,15 @@ Devpost'ta dosya yükleme alanı varsa bunların PDF'lerini ekle. Yoksa GitHub b
 - [ ] Panel bağlantısı (GitHub Pages) açılıyor.
 - [ ] İz seçimi: Carbon Markets & Emissions Transparency.
 - [ ] Gönderim onayının ekran görüntüsünü aldın.
+
+## v1.1 ile gelenler
+- **Hileyi dene sekmesi:** jüri, tesis müdürü rolünde beyanları değiştirir; doğrulayıcı düğümlerdeki ML modelleri tarayıcıda aynen çalışır ve imzalar gerçekten doğrulanır. Videonun ve sunumun en güçlü anı bu olmalı. Doğrudan bağlantı: https://turan16-k.github.io/IEEE/app/?tab=simulator&preset=fuel
+- **Gerçek uydu verisi:** İskenderun Körfezi çelik bölgesi üzerinde Sentinel-5P NO₂ serisi (2025-07 – 2026-09), Copernicus verisinden.
+- **Türkçe/İngilizce dil düğmesi:** sağ üstte TR/EN.
+- **CBAM tedarikçi verisi dışa aktarımı:** Üretici ve AB İthalatçısı sekmelerinde CSV/JSON indirme.
+- **MetaMask:** ithalatçı beyanı ve düzenleyicinin iptal işlemi panelden cüzdanla yapılabiliyor (canlı zincir gerekir).
+- **Sade dille özet:** her rapor için tesis müdürüne Türkçe ve İngilizce açıklama. Claude API anahtarı tanımlıysa Claude yazar, değilse şablon kullanılır; kararı her zaman kontroller verir.
+- **Otomatik testler (CI):** her gönderimde sözleşme, Python ve tarayıcı eşdeğerlik testleri GitHub Actions'ta çalışır; README'deki yeşil rozet bunu gösterir.
 
 ## Jüriye karşı güçlü yanlar
 Jürinin çoğu Türk kriptografi ve siber güvenlik akademisyeni. Sunumda ve videoda şunları özellikle vurgula:

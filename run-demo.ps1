@@ -11,21 +11,30 @@ $py = Join-Path $PSScriptRoot ".venv\Scripts\python.exe"
 if (-not (Test-Path $py)) { $py = "python" }
 $env:PYTHONPATH = Join-Path $PSScriptRoot "verifier"
 $env:PYTHONIOENCODING = "utf-8"
+if ($Network -ne "localhost" -and (Test-Path ".env")) {
+  Get-Content ".env" | ForEach-Object {
+    if ($_ -match '^\s*([A-Z_]+)\s*=\s*(.*)$') { Set-Item "env:$($matches[1])" ($matches[2].Trim().Trim('"')) }
+  }
+}
 
-Write-Host "`n[1/4] Synthetic demo dataset" -ForegroundColor Cyan
+Write-Host "`n[1/5] Synthetic demo dataset" -ForegroundColor Cyan
 & $py -m emispass simulate
 if ($LASTEXITCODE) { exit 1 }
 
-Write-Host "`n[2/4] Deploy contracts ($Network)" -ForegroundColor Cyan
+Write-Host "`n[2/5] Deploy contracts ($Network)" -ForegroundColor Cyan
 npx hardhat run scripts/deploy.js --network $Network
 if ($LASTEXITCODE) { exit 1 }
 
-Write-Host "`n[3/4] Operator signing + 3 AI verifier nodes" -ForegroundColor Cyan
+Write-Host "`n[3/5] Operator signing + 3 AI verifier nodes" -ForegroundColor Cyan
 & $py -m emispass run --deployment "deployments/$Network.json"
 if ($LASTEXITCODE) { exit 1 }
 
-Write-Host "`n[4/4] Anchor passports, attack suite, importer declarations" -ForegroundColor Cyan
+Write-Host "`n[4/5] Anchor passports, attack suite, importer declarations" -ForegroundColor Cyan
 npx hardhat run scripts/anchor.js --network $Network
+if ($LASTEXITCODE) { exit 1 }
+
+Write-Host "`n[5/5] Browser verifier parity check" -ForegroundColor Cyan
+node scripts/check-simulator.js
 if ($LASTEXITCODE) { exit 1 }
 
 if ($Serve) {

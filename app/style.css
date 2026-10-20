@@ -158,3 +158,31 @@ footer { max-width: 1180px; margin: 0 auto; padding: 8px 24px 40px; color: var(-
   select { min-width: 0; width: 100%; }
   .row label { flex: 1 1 100%; }
 }
+
+/* v2: header actions, language switch, wallet, simulator, toast */
+.top-right { display: flex; flex-direction: column; align-items: flex-end; gap: 8px; }
+.top-actions { display: flex; gap: 8px; align-items: center; }
+.lang { display: inline-flex; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+.lang button { border: 0; background: none; color: var(--muted); font: inherit; font-size: 0.8rem; font-weight: 600; padding: 5px 10px; cursor: pointer; }
+.lang button[aria-pressed="true"] { background: var(--accent); color: var(--accent-ink); }
+.btn.ghost { background: none; color: var(--accent); border: 1px solid var(--accent); }
+.btn.danger { background: var(--bad); color: #fff; }
+.btn.small { padding: 5px 10px; font-size: 0.82rem; font-weight: 550; }
+.btnrow { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px; }
+.presets { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; margin-bottom: 14px; }
+.presets > div { display: flex; gap: 6px; flex-wrap: wrap; }
+.slider { margin-bottom: 14px; }
+.slider label { display: block; font-size: 0.85rem; color: var(--ink); margin-bottom: 4px; }
+.slider label b { font-variant-numeric: tabular-nums; }
+.slider input[type="range"] { width: 100%; accent-color: var(--accent); }
+label.check { flex-direction: row; align-items: center; gap: 8px; font-size: 0.85rem; color: var(--ink); margin: 8px 0; }
+.bars > div { display: grid; grid-template-columns: 90px 1fr 80px; gap: 8px; align-items: center; margin: 6px 0; font-size: 0.85rem; }
+.bars i { display: block; height: 12px; border-radius: 6px; }
+.bars b { text-align: right; font-variant-numeric: tabular-nums; }
+.summary p { margin-top: 0; }
+.toast { position: fixed; right: 16px; bottom: 16px; max-width: min(420px, calc(100vw - 32px)); background: var(--ink); color: var(--bg); padding: 10px 14px; border-radius: 8px; font-size: 0.88rem; z-index: 10; box-shadow: 0 6px 24px rgba(0,0,0,.25); }
+[hidden] { display: none !important; }
+@media (max-width: 860px) {
+  .top-right { align-items: flex-start; }
+  .bars > div { grid-template-columns: 70px 1fr 70px; }
+}

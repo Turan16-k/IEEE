@@ -65,3 +65,13 @@ Adversaries considered:
 - `npx hardhat test`: 19 passing. Covers EIP-712 parity, issuance, flagged and corrected flows, threshold, duplicates, outsiders, tampering, replay, key rotation, inactive facilities, selective disclosure, single-use declarations, revocation and access control.
 - `pytest`: 9 passing. Covers honest claims approved, fraud flagged with explanations, correction approved, forged and untrusted feeds critical, determinism across nodes, EIP-712 round-trip, signed-record tampering, Merkle importer binding.
 - `scripts/anchor.js`: 6 live attacks against the deployed contracts, 6 blocked.
+
+## 6. Additions in v1.1
+
+| Component | Risk | Control |
+|---|---|---|
+| Browser verifier | A modified copy could show a misleading verdict | It is a demonstration and self-check only. Authoritative verdicts come from the signed reports and the on-chain passport. Parity with the Python verifier is tested in CI. |
+| LLM summaries (optional) | Hallucinated numbers, or a summary contradicting the verdict | The prompt restricts the model to report numbers and forbids changing the verdict; structured JSON output. The summary is not part of `reportHash`, and the dashboard shows the verdict from the report beside it. The template is used whenever the API is unavailable or the model declines. |
+| Report data sent to an LLM | Confidentiality of plant data | Only the report (totals, findings, hashes) is sent, never the evidence bundle. The feature is off unless credentials are configured; `--no-llm` disables it explicitly. |
+| Wallet actions | Phishing or wrong chain | Chain id is taken from the deployment file and switched explicitly. Role checks (`hasRole`) and importer-address checks run before any transaction is proposed. All authorisation is enforced by the contract, not the UI. |
+| Real satellite data | Coarse resolution, cloud gaps | QA filtering (≥ 0.75), background subtraction, used only as supporting evidence (medium severity at most). |

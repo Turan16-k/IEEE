@@ -1,0 +1,4 @@
+# Optional extras: real Sentinel-5P download (fetch-sentinel5p) and Claude-written summaries
+tifffile>=2024.1
+imagecodecs>=2024.1
+anthropic>=0.70

@@ -18,7 +18,10 @@ const ROLE_INDEX = {
 };
 
 function roleWallet(role, provider) {
-  const phrase = process.env.EMISPASS_MNEMONIC || HARDHAT_MNEMONIC;
+  // The local chain always uses the Hardhat mnemonic, even when .env (loaded by hardhat.config.js)
+  // holds a testnet mnemonic.
+  const local = ["localhost", "hardhat", undefined].includes(process.env.HARDHAT_NETWORK);
+  const phrase = (!local && process.env.EMISPASS_MNEMONIC) || HARDHAT_MNEMONIC;
   const wallet = ethers.HDNodeWallet.fromPhrase(phrase, undefined, `m/44'/60'/0'/0/${ROLE_INDEX[role]}`);
   return provider ? wallet.connect(provider) : wallet;
 }
